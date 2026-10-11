@@ -646,12 +646,19 @@
     </section>
 
     <!-- CÓMO AYUDAR -->
-    <section id="ayuda" class="seccion-padding bg-secundario">
-        <div class="max-w-site mx-auto px-6 reveal">
-            <h2 class="h2-main text-oscuro text-center mb-12">Hay muchas maneras de caminar con nosotros</h2>
+    <section id="ayuda" class="seccion-padding bg-[#FFF8D8] relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-amarillo/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute -bottom-28 -right-20 w-80 h-80 rounded-full bg-institucional/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+        <div class="max-w-site mx-auto px-6 reveal relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <span class="etiqueta text-institucional mb-3 block">CÓMO PUEDES AYUDAR</span>
+                <h2 class="h2-main text-oscuro mb-4">Elige cómo quieres caminar con nosotros</h2>
+                <p class="parrafo text-texto-muted">Cada aporte, traslado, hora de voluntariado o alianza nos ayuda a llegar más lejos junto a las familias de Cajamarca.</p>
+            </div>
             
             <!-- BANNER PAYPAL INTERNACIONAL -->
-            <div id="donar-paypal" class="bg-institucional rounded-[32px] p-8 md:p-12 mb-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl relative overflow-hidden group scroll-mt-28">
+            <div id="donar-paypal" class="bg-institucional rounded-[32px] p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_24px_60px_rgba(9,44,92,0.20)] relative overflow-hidden group scroll-mt-28">
                 <!-- Decoración de fondo -->
                 <div class="absolute -right-10 -top-10 opacity-10 pointer-events-none group-hover:scale-110 transition-transform duration-700">
                     <i data-lucide="globe" class="w-80 h-80"></i>
@@ -678,46 +685,62 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                 <!-- Donar -->
-                <div class="bg-amarillo p-8 rounded-[24px] text-center flex flex-col items-center shadow-sm">
-                    <div class="w-12 h-12 bg-rojo/10 rounded-full flex items-center justify-center text-rojo mb-4">
-                        <i data-lucide="heart" class="w-6 h-6"></i>
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-rojo"></div>
+                    <div class="w-14 h-14 bg-rojo/10 rounded-2xl flex items-center justify-center text-rojo mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-serif text-[24px] text-oscuro mb-2">Donar</h3>
-                    <p class="text-texto-muted text-sm mb-6 max-w-[220px]">Tu aporte sostiene nuestros programas, visitas y logística.</p>
-                    <a href="#donar-paypal" class="mt-auto text-rojo font-semibold hover:underline">DONAR CON PAYPAL</a>
-                </div>
+                    <span class="etiqueta text-rojo text-[11px] mb-2 block">APORTE DIRECTO</span>
+                    <h3 class="font-serif text-[26px] text-oscuro mb-3">Donar</h3>
+                    <p class="text-texto-muted text-[15px] leading-relaxed mb-7">Tu aporte sostiene nuestros programas, visitas y la logística necesaria para llegar a más familias.</p>
+                    <a href="#donar-paypal" aria-label="Ir a la donación segura con PayPal" class="mt-auto w-full rounded-full bg-rojo text-white px-5 py-3.5 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#B91419] transition-colors">
+                        DONAR CON PAYPAL <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
 
                 <!-- Movilidad -->
-                <div class="bg-amarillo p-8 rounded-[24px] text-center flex flex-col items-center shadow-sm">
-                    <div class="w-12 h-12 bg-institucional/10 rounded-full flex items-center justify-center text-institucional mb-4">
-                        <i data-lucide="truck" class="w-6 h-6"></i>
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-institucional"></div>
+                    <div class="w-14 h-14 bg-institucional/10 rounded-2xl flex items-center justify-center text-institucional mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="truck" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-serif text-[24px] text-oscuro mb-2">Apoyar con movilidad</h3>
-                    <p class="text-texto-muted text-sm mb-6 max-w-[220px]">Ayúdanos con el traslado del equipo y las donaciones.</p>
-                    <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Quisiera%20apoyar%20con%20movilidad%20para%20sus%20actividades." target="_blank" rel="noopener noreferrer" class="mt-auto text-institucional font-semibold hover:underline">QUIERO APOYAR</a>
-                </div>
+                    <span class="etiqueta text-institucional text-[11px] mb-2 block">TRASLADO SOLIDARIO</span>
+                    <h3 class="font-serif text-[26px] text-oscuro mb-3">Apoyar con movilidad</h3>
+                    <p class="text-texto-muted text-[15px] leading-relaxed mb-7">Ayúdanos con el traslado del equipo y de las donaciones durante nuestras actividades.</p>
+                    <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Quisiera%20apoyar%20con%20movilidad%20para%20sus%20actividades." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp para apoyar con movilidad" class="mt-auto w-full rounded-full bg-institucional text-white px-5 py-3.5 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-oscuro transition-colors">
+                        QUIERO APOYAR <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
 
                 <!-- Voluntariado -->
-                <div class="bg-amarillo p-8 rounded-[24px] text-center flex flex-col items-center shadow-sm">
-                    <div class="w-12 h-12 bg-amarillo/20 rounded-full flex items-center justify-center text-oscuro mb-4">
-                        <i data-lucide="users" class="w-6 h-6"></i>
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-amarillo"></div>
+                    <div class="w-14 h-14 bg-[#FFF4A3] rounded-2xl flex items-center justify-center text-oscuro mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-serif text-[24px] text-oscuro mb-2">Ser voluntario</h3>
-                    <p class="text-texto-muted text-sm mb-6 max-w-[220px]">Suma tu tiempo y tu talento a nuestras campañas.</p>
-                    <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Quisiera%20saber%20c%C3%B3mo%20puedo%20ser%20voluntario." target="_blank" rel="noopener noreferrer" class="mt-auto text-oscuro font-semibold hover:underline">QUIERO PARTICIPAR</a>
-                </div>
+                    <span class="etiqueta text-[#8A6E00] text-[11px] mb-2 block">TIEMPO Y TALENTO</span>
+                    <h3 class="font-serif text-[26px] text-oscuro mb-3">Ser voluntario</h3>
+                    <p class="text-texto-muted text-[15px] leading-relaxed mb-7">Suma tu tiempo, tus capacidades y tu entusiasmo a nuestras próximas campañas.</p>
+                    <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Quisiera%20saber%20c%C3%B3mo%20puedo%20ser%20voluntario." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp para ser voluntario" class="mt-auto w-full rounded-full bg-oscuro text-white px-5 py-3.5 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-institucional transition-colors">
+                        QUIERO PARTICIPAR <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
 
                 <!-- Ser aliado -->
-                <div class="bg-amarillo p-8 rounded-[24px] text-center flex flex-col items-center shadow-sm">
-                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 mb-4">
-                        <i data-lucide="handshake" class="w-6 h-6"></i>
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                    <div class="absolute inset-x-0 top-0 h-1.5 bg-oscuro"></div>
+                    <div class="w-14 h-14 bg-oscuro/10 rounded-2xl flex items-center justify-center text-oscuro mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="handshake" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-serif text-[24px] text-oscuro mb-2">Ser aliado</h3>
-                    <p class="text-texto-muted text-sm mb-6 max-w-[200px]">Alianzas corporativas e institucionales.</p>
-                    <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Represento%20a%20una%20empresa%20o%20instituci%C3%B3n%20y%20quisiera%20conocer%20c%C3%B3mo%20podemos%20ser%20aliados." target="_blank" rel="noopener noreferrer" class="mt-auto text-oscuro font-semibold hover:underline">CONVERSAR</a>
-                </div>
+                    <span class="etiqueta text-oscuro text-[11px] mb-2 block">ALIANZAS CON PROPÓSITO</span>
+                    <h3 class="font-serif text-[26px] text-oscuro mb-3">Ser aliado</h3>
+                    <p class="text-texto-muted text-[15px] leading-relaxed mb-7">Construyamos una alianza corporativa o institucional con impacto en Cajamarca.</p>
+                    <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Represento%20a%20una%20empresa%20o%20instituci%C3%B3n%20y%20quisiera%20conocer%20c%C3%B3mo%20podemos%20ser%20aliados." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp para proponer una alianza" class="mt-auto w-full rounded-full border-2 border-oscuro text-oscuro px-5 py-3 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-oscuro hover:text-white transition-colors">
+                        CONVERSAR <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </article>
             </div>
         </div>
     </section>
