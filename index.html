@@ -264,9 +264,9 @@
                     </div>
                     <p class="etiqueta text-rojo mb-3">UNA FECHA PARA COMPARTIR</p>
                     <h2 class="h2-main text-oscuro mb-4">Salida Navideña 2026</h2>
-                    <div class="inline-flex items-center gap-3 rounded-full bg-amarillo/30 border border-amarillo px-4 py-2 mb-5 text-oscuro">
-                        <i data-lucide="calendar-days" class="w-5 h-5 text-rojo"></i>
-                        <span class="font-semibold">19 de diciembre</span>
+                    <div class="inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-amarillo/30 border border-amarillo px-5 mb-5 text-oscuro align-middle">
+                        <span class="text-lg leading-none" aria-hidden="true">📅</span>
+                        <span class="font-semibold leading-none whitespace-nowrap">19 de diciembre</span>
                     </div>
                     <p class="parrafo text-texto-main mb-8 max-w-2xl">Estamos preparando una nueva salida navideña y necesitamos apoyo para hacerla posible.</p>
 
@@ -430,7 +430,7 @@
                     <div class="absolute top-8 left-0 w-[88%] h-[88%] rounded-[34px] bg-amarillo" aria-hidden="true"></div>
                     <figure class="relative overflow-hidden rounded-[34px] shadow-[0_28px_70px_rgba(9,44,92,0.22)]">
                         <img src="assets/galeria-078.jpeg" alt="Presentación de la propuesta arquitectónica de la Clínica Hogar" class="w-full aspect-[4/3] object-cover" loading="lazy">
-                        <figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-oscuro/95 to-transparent p-7 pt-20 text-white">
+                        <figcaption class="absolute top-0 left-0 right-0 bg-gradient-to-b from-oscuro/95 via-oscuro/70 to-transparent p-7 pb-24 text-white">
                             <p class="font-serif text-2xl">Una visión que comenzó a tomar forma</p>
                             <p class="text-sm text-white/75 mt-1">Presentación de los espacios proyectados para la Clínica Hogar.</p>
                         </figcaption>
@@ -463,20 +463,29 @@
                 </div>
             </div>
 
-            <div class="mt-14 md:mt-20 relative overflow-hidden bg-institucional text-white rounded-[32px] p-8 md:p-12 lg:p-14 reveal">
-                <div class="absolute right-0 top-0 h-full w-[44%] bg-gradient-to-l from-oscuro to-transparent pointer-events-none" aria-hidden="true"></div>
-                <div class="absolute -right-14 -bottom-20 w-72 h-72 rounded-full border-[42px] border-amarillo/20" aria-hidden="true"></div>
-                <div class="relative z-10 max-w-4xl">
-                    <span class="etiqueta text-amarillo mb-3 block">SÉ PARTE DE ESTE SUEÑO</span>
-                    <h3 class="h3-main text-white mb-4">Ayúdanos a seguir avanzando</h3>
-                    <p class="parrafo text-white/85 mb-8">Cada aporte contribuye a seguir avanzando hacia la Clínica Hogar Camina Conmigo. Tu apoyo puede ayudarnos a gestionar los recursos necesarios para convertir esta iniciativa en un espacio de atención y rehabilitación para quienes más lo necesitan.</p>
-                    <div class="flex flex-wrap items-center gap-5">
-                        <a href="#donar-paypal" class="inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-7 py-4 font-bold text-white hover:bg-amarillo hover:text-oscuro transition-colors shadow-lg">
-                            QUIERO AYUDAR <i data-lucide="heart-handshake" class="w-5 h-5"></i>
-                        </a>
-                        <button type="button" class="inline-flex items-center gap-2 text-white/90 font-semibold hover:text-amarillo transition-colors" onclick="openLightbox('assets/galeria-001.jpeg', 'Brochure del Proyecto Clínica Hogar')">
-                            <i data-lucide="book-open" class="w-5 h-5"></i> Ver brochure del proyecto
-                        </button>
+            <div class="mt-14 md:mt-20 relative overflow-hidden rounded-[36px] bg-gradient-to-br from-oscuro via-institucional to-[#1769C2] text-white shadow-[0_28px_70px_rgba(9,44,92,0.24)] reveal">
+                <div class="absolute -left-16 -top-20 w-72 h-72 rounded-full border-[38px] border-amarillo/15" aria-hidden="true"></div>
+                <div class="absolute left-[42%] bottom-0 w-40 h-2 bg-amarillo" aria-hidden="true"></div>
+                <div class="grid lg:grid-cols-12 min-h-[430px]">
+                    <div class="lg:col-span-7 relative z-10 p-8 md:p-12 lg:p-14 flex flex-col justify-center">
+                        <div class="w-14 h-14 rounded-full bg-amarillo text-oscuro flex items-center justify-center text-2xl mb-6 shadow-lg" aria-hidden="true">♥</div>
+                        <span class="etiqueta text-amarillo mb-3 block">SÉ PARTE DE ESTE SUEÑO</span>
+                        <h3 class="h3-main text-white mb-4">Ayúdanos a seguir avanzando</h3>
+                        <p class="parrafo text-white/85 mb-8 max-w-3xl">Cada aporte contribuye a seguir avanzando hacia la Clínica Hogar Camina Conmigo. Tu apoyo puede ayudarnos a gestionar los recursos necesarios para convertir esta iniciativa en un espacio de atención y rehabilitación para quienes más lo necesitan.</p>
+                        <div class="flex flex-wrap items-center gap-5">
+                            <a href="#donar-paypal" aria-controls="donar-paypal" onclick="document.getElementById('donar-paypal').scrollIntoView({behavior:'smooth', block:'start'}); return false;" class="inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-7 py-4 font-bold text-white hover:bg-amarillo hover:text-oscuro transition-colors shadow-lg">
+                                <span aria-hidden="true">❤️</span> QUIERO AYUDAR <i data-lucide="arrow-down" class="w-5 h-5"></i>
+                            </a>
+                            <button type="button" class="inline-flex items-center gap-2 text-white/90 font-semibold hover:text-amarillo transition-colors" onclick="openLightbox('assets/galeria-001.jpeg', 'Brochure del Proyecto Clínica Hogar')">
+                                <i data-lucide="book-open" class="w-5 h-5"></i> Ver brochure del proyecto
+                            </button>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
+                        <img src="assets/galeria-074.jpeg" alt="Presentación pública del Proyecto Clínica Hogar Camina Conmigo" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-r from-institucional via-institucional/25 to-transparent lg:block hidden"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-oscuro/75 to-transparent lg:hidden"></div>
+                        <p class="absolute bottom-7 right-7 left-7 text-right text-sm font-semibold text-white drop-shadow-lg">Un sueño que avanza con cada alianza y cada aporte.</p>
                     </div>
                 </div>
             </div>
@@ -644,21 +653,37 @@
     </section>
 
     <!-- COLABORADORES NAVIDEÑOS -->
-    <section class="seccion-padding bg-blanco border-b border-gray-100">
-        <div class="max-w-site mx-auto px-6 text-center reveal">
-            <h2 class="h2-main text-oscuro mb-8 max-w-3xl mx-auto">Juntos hacemos posible la Navidad</h2>
-            
-            <div class="w-full max-w-[800px] aspect-video rounded-[24px] overflow-hidden relative cursor-pointer video-card shadow-xl mx-auto mb-10" onclick="openVideoModal('x5UsxtqZOAc')">
-                <img src="assets/hero-visita-navidena.jpeg" alt="Colaboradores de una visita navideña de Camina Conmigo" class="w-full h-full object-cover" loading="lazy">
-                <div class="absolute inset-0 play-overlay flex items-center justify-center">
-                    <div class="play-btn"><i data-lucide="play" class="w-8 h-8 fill-white"></i></div>
+    <section class="seccion-padding relative overflow-hidden bg-gradient-to-br from-[#FFF8E8] via-[#FFFDF8] to-[#FFE7B5] border-b-4 border-amarillo">
+        <div class="absolute -top-24 -left-16 w-72 h-72 rounded-full bg-rojo/10 blur-3xl" aria-hidden="true"></div>
+        <div class="absolute -bottom-28 -right-16 w-80 h-80 rounded-full bg-amarillo/30 blur-3xl" aria-hidden="true"></div>
+        <span class="absolute top-12 right-[8%] text-rojo/20 text-5xl" aria-hidden="true">✦</span>
+        <span class="absolute bottom-12 left-[6%] text-institucional/15 text-5xl" aria-hidden="true">❄</span>
+
+        <div class="max-w-site mx-auto px-6 relative z-10 reveal">
+            <div class="grid lg:grid-cols-12 items-center gap-10 lg:gap-16">
+                <div class="lg:col-span-5 text-left">
+                    <span class="etiqueta text-rojo mb-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm"><span aria-hidden="true">🎄</span> NAVIDAD QUE UNE</span>
+                    <h2 class="h2-main text-oscuro mb-6">Juntos hacemos posible la Navidad</h2>
+                    <div class="w-20 h-1 bg-amarillo mb-6"></div>
+                    <p class="parrafo text-texto-main mb-8">Cada persona, empresa e institución que se suma hace posible que este camino continúe.</p>
+                    <a href="#ayuda" class="inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-7 py-4 font-bold text-white hover:bg-oscuro transition-colors shadow-[0_12px_28px_rgba(215,25,32,0.24)]">
+                        <span aria-hidden="true">🎁</span> QUIERO SUMARME
+                    </a>
+                </div>
+
+                <div class="lg:col-span-7 relative">
+                    <div class="absolute -top-5 -right-5 w-full h-full rounded-[32px] bg-amarillo" aria-hidden="true"></div>
+                    <div class="w-full aspect-video rounded-[32px] overflow-hidden relative cursor-pointer video-card shadow-[0_24px_60px_rgba(74,34,10,0.22)]" onclick="openVideoModal('x5UsxtqZOAc')" role="button" tabindex="0" onkeydown="if(event.key === 'Enter' || event.key === ' ') openVideoModal('x5UsxtqZOAc')" aria-label="Reproducir video de colaboradores en una visita navideña">
+                        <img src="assets/hero-visita-navidena.jpeg" alt="Colaboradores de una visita navideña de Camina Conmigo" class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 play-overlay flex items-center justify-center">
+                            <div class="play-btn"><i data-lucide="play" class="w-8 h-8 fill-white"></i></div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 pt-20 bg-gradient-to-t from-oscuro/85 to-transparent text-white">
+                            <p class="font-serif text-2xl">Una Navidad que llega hasta las comunidades</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <p class="parrafo text-texto-main max-w-2xl mx-auto mb-8">
-                Cada persona, empresa e institución que se suma hace posible que este camino continúe.
-            </p>
-            <a href="#ayuda" class="btn-rojo">QUIERO SUMARME</a>
         </div>
     </section>
 
@@ -690,8 +715,10 @@
     </section>
 
     <!-- REDES SOCIALES -->
-    <section class="py-16 bg-[#061C3D]">
-        <div class="max-w-site mx-auto px-6 text-center reveal">
+    <section class="relative z-20 overflow-hidden py-20 bg-[#061C3D] border-b-8 border-amarillo">
+        <div class="absolute -left-20 -bottom-32 w-72 h-72 rounded-full border-[38px] border-white/5" aria-hidden="true"></div>
+        <div class="absolute -right-16 -top-28 w-64 h-64 rounded-full bg-institucional/30 blur-3xl" aria-hidden="true"></div>
+        <div class="max-w-site mx-auto px-6 text-center reveal relative z-10">
             <h2 class="h2-main text-white mb-3">Sigue nuestro camino</h2>
             <p class="parrafo text-white/70 mb-10">Ayúdanos a llegar a más personas compartiendo nuestra historia.</p>
             
