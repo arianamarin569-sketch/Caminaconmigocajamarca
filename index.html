@@ -232,30 +232,39 @@
     </section>
 
     <!-- CAMPAÑA ACTUAL -->
-    <section id="movilidad" class="bg-[#FFF9D9] py-12 border-b border-amarillo/20 reveal">
-        <div class="max-w-site mx-auto px-6 flex flex-col xl:flex-row xl:items-stretch gap-8">
+    <section id="movilidad" class="relative overflow-hidden bg-gradient-to-br from-[#092C5C] via-[#123F78] to-[#8B1820] py-14 border-b-4 border-amarillo reveal">
+        <div class="absolute inset-0 opacity-20 pointer-events-none" aria-hidden="true">
+            <span class="absolute top-7 left-[8%] text-white text-3xl">❄</span>
+            <span class="absolute bottom-8 left-[32%] text-amarillo text-2xl">✦</span>
+            <span class="absolute top-10 right-[28%] text-white text-xl">✦</span>
+            <span class="absolute -bottom-20 -right-16 w-64 h-64 rounded-full border-[34px] border-white/20"></span>
+            <span class="absolute -top-24 -left-20 w-56 h-56 rounded-full bg-rojo/50 blur-3xl"></span>
+        </div>
+        <div class="max-w-site mx-auto px-6 flex flex-col xl:flex-row xl:items-stretch gap-8 relative z-10">
             <div class="xl:w-[36%] flex flex-col justify-center">
-                <span class="etiqueta text-rojo mb-2 block bg-rojo/10 w-fit px-3 py-1 rounded-full">CAMPAÑA ACTUAL</span>
-                <h2 class="h2-main text-oscuro mb-1">Salida Navideña 2026</h2>
-                <p class="text-institucional font-medium text-xl mb-3">19 de diciembre</p>
-                <p class="parrafo text-texto-main">Estamos preparando una nueva salida navideña y necesitamos apoyo para hacerla posible.</p>
+                <span class="etiqueta text-amarillo mb-3 block bg-white/10 border border-white/15 w-fit px-4 py-2 rounded-full">CAMPAÑA ACTUAL · NAVIDAD</span>
+                <h2 class="h2-main text-white mb-4">Salida Navideña 2026</h2>
+                <div class="flex items-center gap-3 mb-4 text-amarillo">
+                    <span class="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center border border-white/15"><i data-lucide="calendar-days" class="w-5 h-5"></i></span>
+                    <p class="font-serif text-2xl">19 de diciembre</p>
+                </div>
+                <p class="parrafo text-white/85 max-w-lg">Estamos preparando una nueva salida navideña y necesitamos apoyo para hacerla posible.</p>
             </div>
             <div class="xl:w-[64%] grid md:grid-cols-2 gap-4">
-                <article class="bg-white rounded-[20px] p-5 md:p-6 shadow-[0_6px_24px_rgba(9,44,92,0.08)] border border-rojo/10 flex flex-col">
+                <article class="bg-white rounded-[22px] p-5 md:p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] border-t-4 border-rojo flex flex-col">
                     <div class="flex items-center gap-3 mb-3">
                         <div class="w-10 h-10 shrink-0 bg-rojo/10 rounded-full flex items-center justify-center text-lg" aria-hidden="true">❤️</div>
                         <h3 class="text-xl font-serif font-semibold text-oscuro">Donaciones</h3>
                     </div>
-                    <p class="text-sm leading-relaxed text-texto-muted mb-3">Para cualquier donación monetaria, comunícate directamente con la Srta. Gladis Abanto mediante WhatsApp.</p>
-                    <p class="text-sm text-institucional font-semibold mb-4">Srta. Gladis Abanto · Atención segura por WhatsApp</p>
+                    <p class="text-sm leading-relaxed text-texto-muted mb-5">¿Deseas realizar una donación monetaria? Comunícate directamente con Gladis Abanto por WhatsApp y recibe la información necesaria para realizar tu aporte.</p>
                     <a href="https://wa.me/51976003882?text=Hola%20Gladis.%20Conoc%C3%AD%20Camina%20Conmigo%20a%20trav%C3%A9s%20de%20su%20p%C3%A1gina%20web%20y%20quisiera%20realizar%20una%20donaci%C3%B3n.%20%C2%BFPodr%C3%ADa%20brindarme%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-5 py-3 text-sm font-bold text-white hover:bg-oscuro transition-colors">
                         <i data-lucide="message-circle" class="w-4 h-4"></i> CONTACTAR POR WHATSAPP
                     </a>
                 </article>
 
-                <article class="bg-white rounded-[20px] p-5 md:p-6 shadow-[0_6px_24px_rgba(9,44,92,0.08)] border border-institucional/10 flex flex-col">
+                <article class="bg-white rounded-[22px] p-5 md:p-6 shadow-[0_18px_50px_rgba(0,0,0,0.18)] border-t-4 border-amarillo flex flex-col">
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 shrink-0 bg-institucional/10 rounded-full flex items-center justify-center text-lg" aria-hidden="true">🚐</div>
+                        <div class="w-10 h-10 shrink-0 bg-amarillo/35 rounded-full flex items-center justify-center text-lg" aria-hidden="true">🚐</div>
                         <h3 class="text-xl font-serif font-semibold text-oscuro">Necesitamos movilidad</h3>
                     </div>
                     <p class="text-sm leading-relaxed text-texto-muted mb-4">Buscamos una Sprinter o Combi con capacidad aproximada para 15 personas para la salida navideña del 19 de diciembre.</p>
@@ -378,27 +387,52 @@
     <!-- PROYECTO CLÍNICA HOGAR -->
     <section id="proyecto" class="py-16 md:py-[100px] bg-secundario">
         <div class="max-w-site mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start mb-16 reveal">
-                <div class="lg:col-span-5">
-                    <span class="etiqueta text-institucional mb-3 block">02 · VISIÓN DE FUTURO</span>
-                    <h2 class="h2-main text-oscuro mb-6">Proyecto Clínica Hogar Camina Conmigo</h2>
-                    <p class="font-serif text-[24px] text-institucional leading-snug">Una propuesta que busca hacer posible un espacio de atención especializada para niños y adolescentes con habilidades especiales de las zonas rurales de Cajamarca.</p>
-                </div>
-                <div class="lg:col-span-7 space-y-5">
-                    <p class="parrafo text-texto-main">El Proyecto Clínica Hogar Camina Conmigo es una de las principales iniciativas impulsadas por la Asociación Civil ONG Camina Conmigo. Su objetivo es desarrollar, en el futuro, un centro especializado que pueda brindar atención, rehabilitación, acogida temporal y acompañamiento familiar a niños, niñas y adolescentes en situación de extrema vulnerabilidad.</p>
-                    <p class="parrafo text-texto-muted">La propuesta considera áreas destinadas a atención médica y terapias, espacios de alojamiento temporal para menores que deban desplazarse desde comunidades alejadas y programas de orientación para sus familias.</p>
-                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
-                        <div class="rounded-[20px] bg-white p-5 border border-institucional/10 shadow-[0_8px_30px_rgba(9,44,92,0.05)]">
-                            <p class="etiqueta text-rojo mb-2">ESTADO ACTUAL</p>
-                            <p class="text-sm leading-relaxed text-texto-main">Actualmente, el proyecto <strong>aún no ha sido construido</strong>. Sin embargo, cuenta con avances importantes, como el <strong>terreno donado</strong> y la <strong>conclusión del perfil técnico</strong>, que representan pasos fundamentales para continuar gestionando apoyo, alianzas y financiamiento para su futura ejecución.</p>
-                        </div>
-                        <div class="rounded-[20px] bg-amarillo p-5 border border-amarillo/40">
-                            <p class="etiqueta text-oscuro/70 mb-2">VALORIZACIÓN TÉCNICA</p>
-                            <p class="font-serif text-3xl text-oscuro mb-1">US$ 7 millones</p>
-                            <p class="text-sm leading-relaxed text-texto-main">El proyecto fue valorizado técnicamente en aproximadamente este monto.</p>
-                        </div>
+            <div class="relative overflow-hidden rounded-[32px] bg-white border border-institucional/10 shadow-[0_20px_60px_rgba(9,44,92,0.08)] p-7 md:p-10 lg:p-12 mb-8 reveal">
+                <div class="absolute top-0 left-0 h-2 w-full bg-gradient-to-r from-institucional via-amarillo to-rojo" aria-hidden="true"></div>
+                <div class="absolute -right-20 -top-24 w-64 h-64 rounded-full bg-amarillo/25 blur-3xl pointer-events-none" aria-hidden="true"></div>
+                <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start relative z-10">
+                    <div class="lg:col-span-5">
+                        <span class="etiqueta text-institucional mb-3 block">02 · VISIÓN DE FUTURO</span>
+                        <h2 class="h2-main text-oscuro mb-6">Proyecto Clínica Hogar Camina Conmigo</h2>
+                        <p class="font-serif text-[24px] text-institucional leading-snug border-l-4 border-rojo pl-5">Una propuesta orientada a crear un espacio de atención integral para niñas, niños y adolescentes con habilidades especiales de las zonas rurales de Cajamarca.</p>
+                    </div>
+                    <div class="lg:col-span-7 space-y-5">
+                        <p class="parrafo text-texto-main">El Proyecto Clínica Hogar Camina Conmigo es una de las principales iniciativas impulsadas por la Asociación Civil ONG Camina Conmigo. Su propósito es hacer realidad un centro que reúna servicios de salud, rehabilitación, acogida temporal y orientación para personas en situación de extrema vulnerabilidad.</p>
+                        <p class="parrafo text-texto-muted">La propuesta contempla consultorios, áreas de terapia, ambientes de alojamiento temporal para quienes deban desplazarse desde comunidades alejadas y espacios destinados al acompañamiento de sus cuidadores.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-5 mb-16 reveal">
+                <article class="md:col-span-7 rounded-[26px] bg-institucional p-7 md:p-8 text-white relative overflow-hidden">
+                    <div class="absolute -right-12 -bottom-14 w-48 h-48 rounded-full border-[28px] border-white/10" aria-hidden="true"></div>
+                    <div class="relative z-10">
+                        <div class="w-11 h-11 rounded-full bg-amarillo text-oscuro flex items-center justify-center mb-5"><i data-lucide="milestone" class="w-5 h-5"></i></div>
+                        <h3 class="h3-main text-white mb-4">Avances del proyecto</h3>
+                        <p class="parrafo text-white/85">La iniciativa cuenta con importantes bases para continuar su desarrollo, entre ellas el <strong class="text-white">terreno donado</strong> y la <strong class="text-white">conclusión del perfil técnico</strong>, que permiten seguir impulsando alianzas, apoyo institucional y financiamiento para su ejecución.</p>
+                    </div>
+                </article>
+
+                <article class="md:col-span-5 rounded-[26px] bg-amarillo p-7 md:p-8 border border-amarillo/50 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-12 w-40 h-40 rounded-full bg-rojo/10" aria-hidden="true"></div>
+                    <div class="relative z-10">
+                        <p class="etiqueta text-institucional mb-3">VALORIZACIÓN TÉCNICA</p>
+                        <p class="font-serif text-[clamp(2.4rem,5vw,4.2rem)] leading-none text-rojo mb-4">US$ 7 millones</p>
+                        <p class="parrafo text-oscuro">Monto estimado para el desarrollo de la infraestructura, equipamiento e implementación de la Clínica Hogar.</p>
+                    </div>
+                </article>
+
+                <article class="md:col-span-12 rounded-[26px] bg-oscuro p-7 md:p-9 flex flex-col lg:flex-row lg:items-center justify-between gap-7 border-l-8 border-rojo relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-72 h-full bg-gradient-to-l from-institucional/60 to-transparent pointer-events-none" aria-hidden="true"></div>
+                    <div class="relative z-10 max-w-3xl">
+                        <span class="etiqueta text-amarillo mb-2 block">SÉ PARTE DE ESTE SUEÑO</span>
+                        <h3 class="h3-main text-white mb-3">Ayúdanos a seguir avanzando</h3>
+                        <p class="parrafo text-white/80">Cada aporte contribuye a seguir avanzando hacia la Clínica Hogar Camina Conmigo. Tu apoyo puede ayudarnos a gestionar los recursos necesarios para convertir esta iniciativa en un espacio de atención y rehabilitación para quienes más lo necesitan.</p>
+                    </div>
+                    <a href="#donar-paypal" class="relative z-10 shrink-0 inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-7 py-4 font-bold text-white hover:bg-amarillo hover:text-oscuro transition-colors shadow-lg">
+                        QUIERO AYUDAR <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                    </a>
+                </article>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal">
@@ -435,8 +469,8 @@
                 <div class="lg:w-[45%]">
                     <span class="etiqueta text-texto-muted mb-2 block">03 · UN NUEVO PASO</span>
                     <h2 class="h2-main text-oscuro mb-6">Donación del terreno</h2>
-                    <p class="font-serif text-[24px] text-institucional leading-snug mb-5">Un terreno donado por la Municipalidad Provincial de Cajamarca para hacer posible un proyecto de atención a largo plazo.</p>
-                    <p class="parrafo text-texto-main">El predio de 1000 m², ubicado en la lotización “Cajamarca 2010”, fue donado formalmente por la Municipalidad Provincial de Cajamarca. Conforme a la Ordenanza Municipal N.° 114-CMPC, el terreno fue destinado a la asistencia de salud y a la futura construcción del Proyecto Clínica Hogar, orientado a la rehabilitación integral de niños con habilidades especiales de la región.</p>
+                    <p class="font-serif text-[24px] text-institucional leading-snug mb-5">Un terreno donado por la Municipalidad Provincial de Cajamarca para el Proyecto Clínica Hogar.</p>
+                    <p class="parrafo text-texto-main">El predio de 1000 m², ubicado en la lotización “Cajamarca 2010”, fue donado formalmente por la Municipalidad Provincial de Cajamarca. Conforme a la Ordenanza Municipal N.° 114-CMPC, el terreno fue destinado a la asistencia de salud y a la futura construcción del Proyecto Clínica Hogar.</p>
                 </div>
                 <div class="lg:w-[55%] w-full">
                     <img src="assets/galeria-091.jpeg" alt="Acto de donación del terreno para Camina Conmigo" class="w-full h-auto aspect-[16/9] object-contain bg-gray-100 rounded-[24px] mb-4" loading="lazy">
@@ -456,8 +490,7 @@
             <div class="lg:col-span-5">
                 <span class="etiqueta text-amarillo mb-3 block">ALIANZA ACADÉMICA</span>
                 <h2 class="h2-main text-white mb-6">UPN y Camina Conmigo: una alianza que impulsó el proyecto</h2>
-                <p class="parrafo text-white/80 mb-5">A través de un convenio de cooperación, la <strong class="text-white">Universidad Privada del Norte – Campus Cajamarca</strong> se sumó al desarrollo del futuro Hogar Clínica. Docentes y estudiantes de la Facultad de Arquitectura y Urbanismo participaron en la elaboración del <strong class="text-white">diseño arquitectónico, los planos y la distribución de los espacios</strong> proyectados para esta iniciativa.</p>
-                <p class="parrafo text-amarillo/95 font-semibold">Esta colaboración permitió convertir una iniciativa social en una propuesta arquitectónica concreta, dando un paso importante hacia el futuro Hogar Clínica.</p>
+                <p class="parrafo text-white/80">A través de un convenio de cooperación, la <strong class="text-white">Universidad Privada del Norte – Campus Cajamarca</strong> se sumó al desarrollo del futuro Hogar Clínica. Docentes y estudiantes de la Facultad de Arquitectura y Urbanismo participaron en la elaboración del <strong class="text-white">diseño arquitectónico, los planos y la distribución de los espacios</strong>.</p>
             </div>
             <div class="lg:col-span-7">
                 <img src="assets/galeria-070.jpeg" alt="Directiva de UPN y representantes de Camina Conmigo durante la entrega del proyecto" class="w-full aspect-video rounded-[24px] object-cover shadow-2xl mb-4" loading="lazy">
