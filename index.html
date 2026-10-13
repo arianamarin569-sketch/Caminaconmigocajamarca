@@ -622,85 +622,122 @@
     </section>
 
     <!-- ACTIVIDADES QUE DEJARON HUELLA -->
-    <section id="momentos" class="seccion-padding bg-amarillo">
-        <div class="max-w-site mx-auto px-6 reveal">
-            <div class="text-center mb-16">
+    <section id="momentos" class="seccion-padding bg-amarillo relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-28 -left-24 w-80 h-80 rounded-full border-[44px] border-white/25"></div>
+            <div class="absolute -bottom-32 -right-20 w-96 h-96 rounded-full bg-rojo/10 blur-2xl"></div>
+            <span class="absolute top-16 right-[8%] text-oscuro/10 text-7xl">✦</span>
+            <span class="absolute bottom-12 left-[5%] text-rojo/15 text-6xl">♥</span>
+            <svg class="absolute inset-x-0 top-[28%] w-full h-[46%] text-oscuro/15" viewBox="0 0 1400 360" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-30 248C190 54 340 330 586 162C770 36 930 278 1110 128C1216 40 1320 94 1450 42" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 18"/>
+            </svg>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 reveal relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="inline-flex items-center gap-2 rounded-full bg-white/85 px-4 py-2 text-oscuro shadow-sm mb-5">
+                    <span class="text-rojo" aria-hidden="true">♥</span>
+                    <span class="etiqueta">HISTORIAS EN MOVIMIENTO</span>
+                </span>
                 <h2 class="h2-main text-oscuro mb-4">Momentos que dejaron huella</h2>
-                <p class="parrafo text-texto-muted max-w-2xl mx-auto">Campañas, encuentros y actividades que forman parte viva de la historia de Camina Conmigo.</p>
+                <p class="parrafo text-texto-main max-w-2xl mx-auto">Campañas, encuentros y actividades que forman parte viva de la historia de Camina Conmigo.</p>
+                <div class="flex items-center justify-center gap-2 mt-6" aria-hidden="true">
+                    <span class="w-8 h-1 rounded-full bg-rojo"></span>
+                    <span class="w-8 h-1 rounded-full bg-white"></span>
+                    <span class="w-8 h-1 rounded-full bg-institucional"></span>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8 items-stretch">
                 <!-- Card 1: Campaña de Salud -->
-                <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] group flex flex-col h-full">
-                    <div class="relative aspect-video cursor-pointer video-card" onclick="openVideoModal('olXsG2q3KF8')">
-                        <img src="assets/visita-comunitaria.jpeg" alt="Campaña de salud y acompañamiento comunitario de Camina Conmigo" class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute inset-0 play-overlay flex items-center justify-center">
-                            <div class="play-btn w-14 h-14"><i data-lucide="play" class="w-6 h-6 fill-white"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow flex flex-col items-start">
+                <article class="relative bg-white rounded-[28px] overflow-hidden shadow-[0_18px_48px_rgba(74,50,0,0.16)] group flex flex-col h-full border-[6px] border-white/55 transition-all duration-300 hover:-translate-y-2 hover:rotate-[-0.5deg]">
+                    <button type="button" class="relative aspect-video cursor-pointer video-card w-full overflow-hidden" onclick="openVideoModal('olXsG2q3KF8')" aria-label="Reproducir video de la Campaña de Salud">
+                        <img src="assets/visita-comunitaria.jpeg" alt="Campaña de salud y acompañamiento comunitario de Camina Conmigo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <span class="absolute inset-0 play-overlay flex items-center justify-center"><span class="play-btn"><i data-lucide="play" class="w-6 h-6 fill-white"></i></span></span>
+                        <span class="absolute top-4 left-4 w-11 h-11 rounded-full bg-rojo text-white font-serif text-xl flex items-center justify-center shadow-lg">01</span>
+                    </button>
+                    <div class="p-6 md:p-7 flex-grow flex flex-col items-start border-t-4 border-rojo">
+                        <span class="etiqueta text-rojo text-[11px] mb-2">ACOMPAÑAR</span>
                         <h3 class="h3-main text-oscuro mb-auto">Campaña de Salud</h3>
-                        <button class="mt-6 text-institucional font-semibold flex items-center gap-2 hover:text-rojo transition-colors" onclick="openVideoModal('olXsG2q3KF8')">
-                            VER VIDEO <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
+                        <button type="button" class="mt-6 text-institucional font-semibold flex items-center gap-2 hover:text-rojo transition-colors" onclick="openVideoModal('olXsG2q3KF8')">VER VIDEO <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
                     </div>
-                </div>
+                </article>
 
                 <!-- Card 2: Reyes Magos -->
-                <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] group flex flex-col h-full">
-                    <div class="relative aspect-video cursor-pointer video-card" onclick="openVideoModal('XacU6N5tmYg')">
-                        <img src="assets/regalos-navidenos.jpeg" alt="Equipo de Camina Conmigo junto a donaciones preparadas para las familias" class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute inset-0 play-overlay flex items-center justify-center">
-                            <div class="play-btn w-14 h-14"><i data-lucide="play" class="w-6 h-6 fill-white"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow flex flex-col items-start">
+                <article class="relative bg-white rounded-[28px] overflow-hidden shadow-[0_18px_48px_rgba(74,50,0,0.16)] group flex flex-col h-full border-[6px] border-white/55 transition-all duration-300 hover:-translate-y-2">
+                    <button type="button" class="relative aspect-video cursor-pointer video-card w-full overflow-hidden" onclick="openVideoModal('XacU6N5tmYg')" aria-label="Reproducir video de la Visita de Reyes Magos">
+                        <img src="assets/regalos-navidenos.jpeg" alt="Equipo de Camina Conmigo junto a donaciones preparadas para las familias" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <span class="absolute inset-0 play-overlay flex items-center justify-center"><span class="play-btn"><i data-lucide="play" class="w-6 h-6 fill-white"></i></span></span>
+                        <span class="absolute top-4 left-4 w-11 h-11 rounded-full bg-institucional text-white font-serif text-xl flex items-center justify-center shadow-lg">02</span>
+                    </button>
+                    <div class="p-6 md:p-7 flex-grow flex flex-col items-start border-t-4 border-institucional">
+                        <span class="etiqueta text-institucional text-[11px] mb-2">COMPARTIR</span>
                         <h3 class="h3-main text-oscuro mb-2">Visita de Reyes Magos</h3>
                         <p class="text-sm text-texto-muted mb-auto">Con el personal del Centro Comercial El Quinde</p>
-                        <p class="mt-4 text-xs font-medium text-amarillo bg-oscuro px-2 py-1 rounded">Tu empresa también puede sumarse</p>
+                        <button type="button" class="mt-6 text-institucional font-semibold flex items-center gap-2 hover:text-rojo transition-colors" onclick="openVideoModal('XacU6N5tmYg')">VER VIDEO <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
                     </div>
-                </div>
+                </article>
 
                 <!-- Card 3: Voluntariado -->
-                <div class="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] group flex flex-col h-full">
-                    <div class="relative aspect-video cursor-pointer video-card" onclick="openVideoModal('lVNE5pUVGeM')">
-                        <img src="assets/equipo-voluntario.jpeg" alt="Voluntarios de Camina Conmigo preparando donaciones navideñas" class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute inset-0 play-overlay flex items-center justify-center">
-                            <div class="play-btn w-14 h-14"><i data-lucide="play" class="w-6 h-6 fill-white"></i></div>
-                        </div>
-                    </div>
-                    <div class="p-6 md:p-8 flex-grow flex flex-col items-start">
+                <article class="relative bg-white rounded-[28px] overflow-hidden shadow-[0_18px_48px_rgba(74,50,0,0.16)] group flex flex-col h-full border-[6px] border-white/55 transition-all duration-300 hover:-translate-y-2 hover:rotate-[0.5deg] md:col-span-2 lg:col-span-1">
+                    <button type="button" class="relative aspect-video cursor-pointer video-card w-full overflow-hidden" onclick="openVideoModal('lVNE5pUVGeM')" aria-label="Reproducir video sobre el voluntariado de Camina Conmigo">
+                        <img src="assets/equipo-voluntario.jpeg" alt="Voluntarios de Camina Conmigo preparando donaciones navideñas" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <span class="absolute inset-0 play-overlay flex items-center justify-center"><span class="play-btn"><i data-lucide="play" class="w-6 h-6 fill-white"></i></span></span>
+                        <span class="absolute top-4 left-4 w-11 h-11 rounded-full bg-oscuro text-white font-serif text-xl flex items-center justify-center shadow-lg">03</span>
+                    </button>
+                    <div class="p-6 md:p-7 flex-grow flex flex-col items-start border-t-4 border-oscuro">
+                        <span class="etiqueta text-oscuro text-[11px] mb-2">SUMAR VOLUNTADES</span>
                         <h3 class="h3-main text-oscuro mb-2">Voluntarios que hacen posible cada paso</h3>
                         <p class="text-sm text-texto-muted mb-auto">Empaque Navideño</p>
-                        <div class="flex gap-2 mt-4">
-                            <!-- Small photos representing volunteering side -->
+                        <div class="flex mt-5" aria-label="Equipo de voluntarios">
                             <img src="assets/galeria-085.jpeg" alt="Voluntarios de Camina Conmigo" class="w-10 h-10 rounded-full border-2 border-white object-cover" loading="lazy">
-                            <img src="assets/galeria-086.jpeg" alt="Equipo histórico de Camina Conmigo" class="w-10 h-10 rounded-full border-2 border-white object-cover -ml-4" loading="lazy">
-                            <img src="assets/galeria-088.jpeg" alt="Voluntarios preparando una campaña" class="w-10 h-10 rounded-full border-2 border-white object-cover -ml-4" loading="lazy">
+                            <img src="assets/galeria-086.jpeg" alt="Equipo histórico de Camina Conmigo" class="w-10 h-10 rounded-full border-2 border-white object-cover -ml-3" loading="lazy">
+                            <img src="assets/galeria-088.jpeg" alt="Voluntarios preparando una campaña" class="w-10 h-10 rounded-full border-2 border-white object-cover -ml-3" loading="lazy">
                         </div>
                         <a href="https://www.youtube.com/watch?v=lVNE5pUVGeM" target="_blank" rel="noopener noreferrer" class="mt-5 text-institucional font-semibold flex items-center gap-2 hover:text-rojo transition-colors">VER VIDEO EN YOUTUBE <i data-lucide="external-link" class="w-4 h-4"></i></a>
                     </div>
-                </div>
-
+                </article>
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIOS -->
     <section class="seccion-padding bg-oscuro relative overflow-hidden">
-        <div class="max-w-site mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 relative z-10 reveal">
-            <div class="lg:w-[45%] text-left">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <img src="assets/acompanamiento-humano.jpeg" alt="" class="absolute inset-y-0 left-0 w-full lg:w-[58%] h-full object-cover object-center opacity-[0.12] grayscale">
+            <div class="absolute inset-0 bg-gradient-to-r from-oscuro/90 via-oscuro/95 to-oscuro/75"></div>
+            <div class="absolute -top-24 -right-16 w-80 h-80 rounded-full border-[42px] border-amarillo/10"></div>
+            <div class="absolute -bottom-24 left-[42%] w-72 h-72 rounded-full bg-institucional/30 blur-3xl"></div>
+            <span class="absolute -top-20 left-[5%] font-serif text-[300px] leading-none text-white/[0.035]">“</span>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 grid lg:grid-cols-12 items-center gap-12 lg:gap-16 relative z-10 reveal">
+            <div class="lg:col-span-5 text-left rounded-[30px] border border-white/10 bg-white/[0.06] p-7 sm:p-9 backdrop-blur-sm shadow-[0_24px_70px_rgba(0,0,0,0.20)]">
+                <span class="w-14 h-14 rounded-full bg-amarillo text-oscuro flex items-center justify-center font-serif text-4xl leading-none mb-6 shadow-lg" aria-hidden="true">“</span>
                 <span class="etiqueta text-amarillo mb-4 block">VOCES DE NUESTRO CAMINO</span>
                 <h2 class="h2-main text-white mb-6">Algunos testimonios</h2>
-                <p class="parrafo text-white/80">Escucha a las familias, voluntarios y personas que han caminado con nosotros. Historias reales que le dan sentido a cada esfuerzo.</p>
+                <p class="parrafo text-white/85">Escucha a las familias, voluntarios y personas que han caminado con nosotros. Historias reales que le dan sentido a cada esfuerzo.</p>
+                <div class="flex items-center gap-2 mt-7" aria-hidden="true">
+                    <span class="w-12 h-1 rounded-full bg-amarillo"></span>
+                    <span class="w-4 h-1 rounded-full bg-rojo"></span>
+                    <span class="w-4 h-1 rounded-full bg-white/50"></span>
+                </div>
             </div>
-            <div class="lg:w-[55%] w-full relative">
-                <div class="w-full aspect-video rounded-[24px] overflow-hidden cursor-pointer video-card shadow-2xl border border-white/10" onclick="openVideoModal('09s78ng1Cxg')">
-                    <img src="assets/testimonio-acompanado.jpeg" alt="Testimonio de acompañamiento de Camina Conmigo" class="w-full h-full object-cover" loading="lazy">
-                    <div class="absolute inset-0 play-overlay flex items-center justify-center">
-                        <div class="play-btn"><i data-lucide="play" class="w-8 h-8 fill-white"></i></div>
-                    </div>
+
+            <div class="lg:col-span-7 w-full relative pb-8 sm:pb-10">
+                <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-full h-full rounded-[30px] bg-amarillo" aria-hidden="true"></div>
+                <div class="absolute -bottom-1 -left-3 md:-left-7 w-24 h-24 rounded-full bg-rojo border-[8px] border-oscuro shadow-xl" aria-hidden="true"></div>
+                <button type="button" class="block relative w-full aspect-video rounded-[26px] overflow-hidden cursor-pointer video-card shadow-[0_30px_75px_rgba(0,0,0,0.38)] border-[7px] border-white group" onclick="openVideoModal('09s78ng1Cxg')" aria-label="Reproducir algunos testimonios de Camina Conmigo">
+                    <img src="assets/testimonio-acompanado.jpeg" alt="Testimonio de acompañamiento de Camina Conmigo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    <span class="absolute inset-0 play-overlay flex items-center justify-center"><span class="play-btn"><i data-lucide="play" class="w-8 h-8 fill-white"></i></span></span>
+                    <span class="absolute inset-x-0 bottom-0 block p-4 sm:p-6 pt-16 sm:pt-20 bg-gradient-to-t from-oscuro/90 to-transparent text-white">
+                        <span class="etiqueta text-amarillo block">HISTORIAS REALES</span>
+                        <span class="hidden sm:block font-serif text-2xl mt-1">Voces que dan sentido a cada esfuerzo</span>
+                    </span>
+                </button>
+                <div class="absolute bottom-0 right-3 sm:right-8 rounded-full bg-white px-4 py-2.5 shadow-xl flex items-center gap-2.5 border border-white">
+                    <span class="w-3 h-3 rounded-full bg-rojo" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold text-oscuro">Escuchar también es acompañar</span>
                 </div>
             </div>
         </div>
@@ -769,7 +806,7 @@
     </section>
 
     <!-- REDES SOCIALES -->
-    <section class="relative z-20 overflow-hidden py-20 bg-[#061C3D] border-b-8 border-amarillo">
+    <section class="relative overflow-hidden py-20 bg-[#061C3D] border-b-8 border-amarillo">
         <div class="absolute -left-20 -bottom-32 w-72 h-72 rounded-full border-[38px] border-white/5" aria-hidden="true"></div>
         <div class="absolute -right-16 -top-28 w-64 h-64 rounded-full bg-institucional/30 blur-3xl" aria-hidden="true"></div>
         <div class="max-w-site mx-auto px-6 text-center reveal relative z-10">
@@ -797,22 +834,40 @@
     </section>
 
     <!-- CÓMO AYUDAR -->
-    <section id="ayuda" class="seccion-padding bg-[#FFF8D8] relative overflow-hidden">
-        <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-amarillo/30 blur-3xl pointer-events-none" aria-hidden="true"></div>
-        <div class="absolute -bottom-28 -right-20 w-80 h-80 rounded-full bg-institucional/10 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <section id="ayuda" class="bg-[#FFF8D8] relative z-30 overflow-hidden scroll-mt-24" style="padding-top: clamp(96px, 10vw, 132px); padding-bottom: clamp(72px, 9vw, 112px);">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-24 -left-24 w-72 h-72 rounded-full bg-amarillo/35 blur-3xl"></div>
+            <div class="absolute -bottom-28 -right-20 w-80 h-80 rounded-full bg-institucional/15 blur-3xl"></div>
+            <div class="absolute top-24 -right-16 w-[48%] max-w-[610px] h-[420px] rounded-[60px] overflow-hidden rotate-3 opacity-[0.16] hidden sm:block">
+                <img src="assets/cierre-solidario.jpeg" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-[#FFF8D8]/25 to-[#FFF8D8]"></div>
+            </div>
+            <div class="absolute bottom-20 -left-20 w-[38%] max-w-[470px] h-[360px] rounded-[54px] overflow-hidden -rotate-3 opacity-[0.13] hidden md:block">
+                <img src="assets/visita-comunitaria.jpeg" alt="" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-[#FFF8D8]"></div>
+            </div>
+            <svg class="absolute inset-x-0 top-[36%] w-full h-[32%] text-institucional/10" viewBox="0 0 1400 340" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-40 270C200 72 360 330 610 160C820 18 1010 280 1440 48" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="13 18"/>
+            </svg>
+        </div>
 
-        <div class="max-w-site mx-auto px-6 reveal relative z-10">
-            <div class="max-w-3xl mx-auto text-center mb-12">
-                <span class="etiqueta text-institucional mb-3 block">CÓMO PUEDES AYUDAR</span>
-                <h2 class="h2-main text-oscuro mb-4">Elige cómo quieres caminar con nosotros</h2>
-                <p class="parrafo text-texto-muted">Cada aporte, traslado, hora de voluntariado o alianza nos ayuda a llegar más lejos junto a las familias de Cajamarca.</p>
+        <div class="max-w-site mx-auto px-5 sm:px-6 reveal relative z-10">
+            <div class="relative overflow-hidden max-w-4xl mx-auto text-center mb-14 rounded-[30px] md:rounded-[38px] bg-white/90 border border-white p-7 sm:p-10 md:px-16 shadow-[0_22px_60px_rgba(89,59,0,0.12)] backdrop-blur-sm">
+                <div class="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-rojo/10" aria-hidden="true"></div>
+                <div class="absolute -bottom-10 -right-8 w-32 h-32 rounded-full bg-amarillo/45" aria-hidden="true"></div>
+                <div class="relative z-10">
+                    <span class="etiqueta text-white bg-institucional rounded-full px-4 py-2.5 mb-5 inline-flex items-center gap-2 shadow-md"><span aria-hidden="true">♥</span> CÓMO PUEDES AYUDAR</span>
+                    <h2 class="h2-main text-oscuro mb-4">Elige cómo quieres caminar con nosotros</h2>
+                    <p class="parrafo text-texto-main max-w-3xl mx-auto">Cada aporte, traslado, hora de voluntariado o alianza nos ayuda a llegar más lejos junto a las familias de Cajamarca.</p>
+                </div>
             </div>
             
             <!-- BANNER PAYPAL INTERNACIONAL -->
-            <div id="donar-paypal" class="bg-institucional rounded-[32px] p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_24px_60px_rgba(9,44,92,0.20)] relative overflow-hidden group scroll-mt-28">
-                <!-- Decoración de fondo -->
-                <div class="absolute -right-10 -top-10 opacity-10 pointer-events-none group-hover:scale-110 transition-transform duration-700">
-                    <i data-lucide="globe" class="w-80 h-80"></i>
+            <div id="donar-paypal" class="bg-institucional rounded-[32px] p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_24px_60px_rgba(9,44,92,0.24)] relative overflow-hidden group scroll-mt-28 border border-white/30">
+                <img src="assets/cierre-solidario.jpeg" alt="" class="absolute inset-y-0 right-0 w-full md:w-[48%] h-full object-cover opacity-25 group-hover:scale-105 transition-transform duration-700" aria-hidden="true">
+                <div class="absolute inset-0 bg-gradient-to-r from-institucional via-institucional/95 to-institucional/45 md:to-institucional/25 pointer-events-none" aria-hidden="true"></div>
+                <div class="absolute -left-14 -bottom-16 opacity-10 pointer-events-none" aria-hidden="true">
+                    <i data-lucide="globe" class="w-64 h-64"></i>
                 </div>
                 
                 <div class="relative z-10 md:w-2/3">
@@ -838,8 +893,9 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                 <!-- Donar -->
-                <article id="aporte-directo" class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden scroll-mt-28">
+                <article id="aporte-directo" class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_16px_42px_rgba(9,44,92,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_52px_rgba(9,44,92,0.18)] transition-all duration-300 overflow-hidden scroll-mt-28 backdrop-blur-sm">
                     <div class="absolute inset-x-0 top-0 h-1.5 bg-rojo"></div>
+                    <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-rojo/[0.07] group-hover:scale-125 transition-transform duration-500" aria-hidden="true"></div>
                     <div class="w-14 h-14 bg-rojo/10 rounded-2xl flex items-center justify-center text-rojo mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="heart" class="w-7 h-7"></i>
                     </div>
@@ -853,8 +909,9 @@
                 </article>
 
                 <!-- Movilidad -->
-                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_16px_42px_rgba(9,44,92,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_52px_rgba(9,44,92,0.18)] transition-all duration-300 overflow-hidden backdrop-blur-sm">
                     <div class="absolute inset-x-0 top-0 h-1.5 bg-institucional"></div>
+                    <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-institucional/[0.07] group-hover:scale-125 transition-transform duration-500" aria-hidden="true"></div>
                     <div class="w-14 h-14 bg-institucional/10 rounded-2xl flex items-center justify-center text-institucional mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="truck" class="w-7 h-7"></i>
                     </div>
@@ -867,8 +924,9 @@
                 </article>
 
                 <!-- Voluntariado -->
-                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_16px_42px_rgba(9,44,92,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_52px_rgba(9,44,92,0.18)] transition-all duration-300 overflow-hidden backdrop-blur-sm">
                     <div class="absolute inset-x-0 top-0 h-1.5 bg-amarillo"></div>
+                    <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-amarillo/20 group-hover:scale-125 transition-transform duration-500" aria-hidden="true"></div>
                     <div class="w-14 h-14 bg-[#FFF4A3] rounded-2xl flex items-center justify-center text-oscuro mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="users" class="w-7 h-7"></i>
                     </div>
@@ -881,8 +939,9 @@
                 </article>
 
                 <!-- Ser aliado -->
-                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_16px_42px_rgba(9,44,92,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_52px_rgba(9,44,92,0.18)] transition-all duration-300 overflow-hidden backdrop-blur-sm">
                     <div class="absolute inset-x-0 top-0 h-1.5 bg-oscuro"></div>
+                    <div class="absolute -top-10 -right-10 w-28 h-28 rounded-full bg-oscuro/[0.07] group-hover:scale-125 transition-transform duration-500" aria-hidden="true"></div>
                     <div class="w-14 h-14 bg-oscuro/10 rounded-2xl flex items-center justify-center text-oscuro mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="handshake" class="w-7 h-7"></i>
                     </div>
