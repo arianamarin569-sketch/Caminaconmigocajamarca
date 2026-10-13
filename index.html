@@ -427,36 +427,78 @@
     </section>
 
     <!-- SECCIÓN HISTÓRICA PRINCIPAL / TIMELINE -->
-    <section class="pt-20 md:pt-[100px] bg-blanco overflow-hidden">
-        <div class="max-w-site mx-auto px-6 text-center mb-16 md:mb-24 reveal">
-            <span class="etiqueta text-institucional mb-3 block">NUESTRA TRAYECTORIA</span>
+    <section class="pt-20 md:pt-[100px] pb-20 md:pb-[110px] relative overflow-hidden bg-gradient-to-b from-[#FFF9D9] via-[#FFFDF8] to-[#EDF5FF]">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute inset-0 opacity-[0.10]" style="background-image: radial-gradient(#0B4DA2 1.2px, transparent 1.2px); background-size: 30px 30px;"></div>
+            <div class="absolute -top-28 -right-24 w-96 h-96 rounded-full bg-amarillo/35 blur-3xl"></div>
+            <div class="absolute top-[42%] -left-32 w-80 h-80 rounded-full border-[52px] border-institucional/[0.08]"></div>
+            <div class="absolute -bottom-28 right-[8%] w-80 h-80 rounded-full bg-institucional/[0.10] blur-3xl"></div>
+            <svg class="absolute top-20 left-0 w-full h-[360px] hidden sm:block text-institucional/20" viewBox="0 0 1440 360" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-30 278C185 100 314 324 510 190C694 65 845 274 1034 132C1173 28 1300 80 1472 12" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 18"/>
+                <circle cx="278" cy="236" r="11" fill="#F7D900" stroke="#092C5C" stroke-width="5"/>
+                <circle cx="733" cy="174" r="11" fill="#D71920" stroke="#092C5C" stroke-width="5"/>
+                <circle cx="1160" cy="82" r="11" fill="#F7D900" stroke="#092C5C" stroke-width="5"/>
+            </svg>
+            <span class="absolute top-[31%] right-[7%] text-amarillo/40 text-6xl hidden md:block">✦</span>
+            <span class="absolute bottom-[12%] left-[5%] text-rojo/15 text-7xl hidden md:block">♥</span>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 text-center mb-14 md:mb-20 reveal relative z-10">
+            <span class="inline-flex items-center gap-2.5 etiqueta text-institucional mb-5 rounded-full bg-white/90 border border-institucional/10 px-5 py-2.5 shadow-[0_10px_30px_rgba(9,44,92,0.10)]">
+                <span class="w-2.5 h-2.5 rounded-full bg-rojo" aria-hidden="true"></span>
+                NUESTRA TRAYECTORIA
+            </span>
             <h2 class="h2-main text-oscuro mb-6">Todo camino comienza con un primer paso</h2>
             <p class="parrafo text-texto-muted max-w-3xl mx-auto">
                 La historia de Camina Conmigo está construida con personas, proyectos, colaboraciones y momentos que fueron haciendo realidad una visión compartida.
             </p>
+            <div class="mt-8 flex items-center justify-center gap-3" aria-hidden="true">
+                <span class="w-12 h-px bg-institucional/25"></span>
+                <span class="w-3 h-3 rounded-full bg-amarillo ring-4 ring-white shadow"></span>
+                <span class="w-20 h-px bg-institucional/25"></span>
+                <span class="w-3 h-3 rounded-full bg-rojo ring-4 ring-white shadow"></span>
+                <span class="w-12 h-px bg-institucional/25"></span>
+            </div>
         </div>
 
         <!-- TIMELINE: Etapa 1 -->
-        <div class="max-w-site mx-auto px-6 mb-24 md:mb-32 reveal">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <span class="etiqueta text-texto-muted mb-2 block">01 · NUESTRO ORIGEN</span>
-                    <h3 class="h2-main text-oscuro mb-6">Nacimiento de la Asociación Civil ONG Camina Conmigo</h3>
-                    <p class="font-serif text-[24px] text-institucional leading-snug mb-5">El inicio de una organización nacida del compromiso social en Cajamarca.</p>
-                    <div class="space-y-5">
-                        <p class="parrafo text-texto-main">La Asociación Civil ONG Camina Conmigo inició formalmente sus actividades el <strong class="text-oscuro">6 de agosto de 2004</strong>, consolidando el esfuerzo de un grupo de profesionales cajamarquinos que decidió organizarse para desarrollar acciones de carácter social y comunitario.</p>
-                        <p class="parrafo text-texto-muted">Desde sus primeros años, la institución quedó vinculada a líneas de trabajo relacionadas con la <strong class="text-oscuro">educación, el desarrollo social y la promoción de oportunidades</strong>, sentando así las bases de una organización que con el tiempo ampliaría sus iniciativas y proyectos en favor de la comunidad cajamarquina.</p>
+        <div class="max-w-site mx-auto px-5 sm:px-6 reveal relative z-10">
+            <div class="relative rounded-[32px] md:rounded-[42px] border border-white bg-white/85 backdrop-blur-sm p-6 sm:p-9 lg:p-12 shadow-[0_28px_80px_rgba(9,44,92,0.14)] overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amarillo via-rojo to-institucional" aria-hidden="true"></div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 rounded-full border-[38px] border-amarillo/20" aria-hidden="true"></div>
+                <div class="absolute bottom-0 left-0 w-28 h-28 bg-institucional/[0.05] rounded-tr-[100px]" aria-hidden="true"></div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
+                    <div class="lg:w-1/2">
+                        <div class="flex items-center gap-4 mb-5">
+                            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-oscuro text-amarillo font-serif text-xl shadow-lg">01</span>
+                            <span class="etiqueta text-institucional">NUESTRO ORIGEN</span>
+                        </div>
+                        <h3 class="h2-main text-oscuro mb-6">Nacimiento de la Asociación Civil ONG Camina Conmigo</h3>
+                        <p class="font-serif text-[24px] text-institucional leading-snug mb-5">El inicio de una organización nacida del compromiso social en Cajamarca.</p>
+                        <div class="w-20 h-1 bg-amarillo rounded-full mb-6"></div>
+                        <div class="space-y-5">
+                            <p class="parrafo text-texto-main">La Asociación Civil ONG Camina Conmigo inició formalmente sus actividades el <strong class="text-oscuro">6 de agosto de 2004</strong>, consolidando el esfuerzo de un grupo de profesionales cajamarquinos que decidió organizarse para desarrollar acciones de carácter social y comunitario.</p>
+                            <p class="parrafo text-texto-muted">Desde sus primeros años, la institución quedó vinculada a líneas de trabajo relacionadas con la <strong class="text-oscuro">educación, el desarrollo social y la promoción de oportunidades</strong>, sentando así las bases de una organización que con el tiempo ampliaría sus iniciativas y proyectos en favor de la comunidad cajamarquina.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="lg:w-1/2 w-full grid grid-cols-2 gap-4">
-                    <div class="col-span-1 row-span-2">
-                        <img src="assets/galeria-085.jpeg" alt="Integrantes de Camina Conmigo durante los primeros años de la asociación" class="w-full h-full object-cover rounded-[24px]" loading="lazy">
-                    </div>
-                    <div class="col-span-1">
-                        <img src="assets/galeria-088.jpeg" alt="Equipo fundador preparando una campaña solidaria" class="w-full aspect-square object-cover rounded-[24px]" loading="lazy">
-                    </div>
-                    <div class="col-span-1">
-                        <img src="assets/galeria-089.jpeg" alt="Equipo de Camina Conmigo con donaciones y su primera pancarta institucional" class="w-full aspect-square object-cover rounded-[24px]" loading="lazy">
+                    <div class="lg:w-1/2 w-full relative pt-5 pr-3 sm:pr-5 pb-5">
+                        <div class="absolute top-0 right-0 w-[82%] h-[82%] rounded-[30px] bg-amarillo" aria-hidden="true"></div>
+                        <div class="absolute bottom-0 left-0 w-[70%] h-[68%] rounded-[30px] bg-institucional/90" aria-hidden="true"></div>
+                        <div class="relative grid grid-cols-2 gap-3 sm:gap-4">
+                            <div class="col-span-1 row-span-2 overflow-hidden rounded-[22px] sm:rounded-[26px] border-[5px] border-white shadow-xl">
+                                <img src="assets/galeria-085.jpeg" alt="Integrantes de Camina Conmigo durante los primeros años de la asociación" class="w-full h-full object-cover" loading="lazy">
+                            </div>
+                            <div class="col-span-1 overflow-hidden rounded-[22px] sm:rounded-[26px] border-[5px] border-white shadow-xl">
+                                <img src="assets/galeria-088.jpeg" alt="Equipo fundador preparando una campaña solidaria" class="w-full aspect-square object-cover" loading="lazy">
+                            </div>
+                            <div class="col-span-1 overflow-hidden rounded-[22px] sm:rounded-[26px] border-[5px] border-white shadow-xl">
+                                <img src="assets/galeria-089.jpeg" alt="Equipo de Camina Conmigo con donaciones y su primera pancarta institucional" class="w-full aspect-square object-cover" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-1 right-0 sm:right-2 rounded-full bg-rojo px-4 py-2.5 text-white shadow-lg rotate-[-2deg]">
+                            <span class="etiqueta">DESDE 2004</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -595,9 +637,9 @@
                 <div class="absolute -top-5 -right-5 w-[88%] h-[78%] rounded-[34px] bg-amarillo" aria-hidden="true"></div>
                 <figure class="relative overflow-hidden rounded-[28px] border-[7px] border-white shadow-[0_28px_75px_rgba(0,0,0,0.40)]">
                     <img src="assets/galeria-070.jpeg" alt="Directiva de UPN y representantes de Camina Conmigo durante la entrega del proyecto" class="w-full aspect-[4/3] sm:aspect-[16/10] object-cover" loading="lazy">
-                    <figcaption class="absolute inset-x-0 bottom-0 p-4 sm:p-6 pt-16 bg-gradient-to-t from-oscuro/95 to-transparent text-white">
+                    <figcaption class="absolute inset-x-0 top-0 p-4 sm:p-6 pb-16 bg-gradient-to-b from-oscuro/95 to-transparent text-white">
                         <span class="etiqueta text-amarillo block">UN PROYECTO QUE TOMÓ FORMA</span>
-                        <span class="font-serif text-xl sm:text-2xl hidden sm:block mt-1">Conocimiento y compromiso puestos al servicio de la comunidad</span>
+                        <span class="font-serif text-lg sm:text-2xl block mt-1">Conocimiento y compromiso puestos al servicio de la comunidad</span>
                     </figcaption>
                 </figure>
                 <div class="absolute bottom-0 left-0 md:left-[-8px] w-[55%] max-w-[380px] rounded-[20px] overflow-hidden border-[6px] border-oscuro shadow-2xl rotate-[-2deg]">
