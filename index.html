@@ -569,55 +569,107 @@
     </section>
 
     <!-- UPN BLOCK -->
-    <section id="perfil-tecnico" class="bg-oscuro py-16 md:py-24 scroll-mt-24">
-        <div class="max-w-site mx-auto px-6 grid lg:grid-cols-12 items-center gap-12 lg:gap-16 reveal">
-            <div class="lg:col-span-5">
-                <span class="etiqueta text-amarillo mb-3 block">ALIANZA ACADÉMICA</span>
+    <section id="perfil-tecnico" class="bg-oscuro py-16 md:py-24 scroll-mt-24 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute inset-0 opacity-[0.08]" style="background-image: linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px); background-size: 42px 42px;"></div>
+            <div class="absolute -top-28 -right-20 w-96 h-96 rounded-full border-[48px] border-institucional/35"></div>
+            <div class="absolute -bottom-32 left-[28%] w-80 h-80 rounded-full bg-institucional/25 blur-3xl"></div>
+            <svg class="absolute left-0 bottom-0 w-[52%] h-[58%] text-amarillo/10" viewBox="0 0 700 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 390V210L180 96L340 210V390M118 390V274H242V390M340 390V160L500 54L660 160V390M444 390V232H556V390" stroke="currentColor" stroke-width="5"/>
+            </svg>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 grid lg:grid-cols-12 items-center gap-12 lg:gap-16 reveal relative z-10">
+            <div class="lg:col-span-5 rounded-[30px] border border-white/10 bg-white/[0.06] p-7 sm:p-9 backdrop-blur-sm shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+                <span class="etiqueta text-oscuro bg-amarillo rounded-full px-4 py-2.5 mb-5 inline-flex items-center gap-2 shadow-lg"><span aria-hidden="true">✦</span> ALIANZA ACADÉMICA</span>
                 <h2 class="h2-main text-white mb-6">UPN y Camina Conmigo: una alianza que impulsó el proyecto</h2>
-                <p class="parrafo text-white/80">A través de un convenio de cooperación, la <strong class="text-white">Universidad Privada del Norte – Campus Cajamarca</strong> se sumó al desarrollo del futuro Hogar Clínica. Docentes y estudiantes de la Facultad de Arquitectura y Urbanismo participaron en la elaboración del <strong class="text-white">diseño arquitectónico, los planos y la distribución de los espacios</strong>.</p>
+                <p class="parrafo text-white/85">A través de un convenio de cooperación, la <strong class="text-white">Universidad Privada del Norte – Campus Cajamarca</strong> se sumó al desarrollo del futuro Hogar Clínica. Docentes y estudiantes de la Facultad de Arquitectura y Urbanismo participaron en la elaboración del <strong class="text-white">diseño arquitectónico, los planos y la distribución de los espacios</strong>.</p>
+                <div class="flex flex-wrap gap-2.5 mt-7">
+                    <span class="rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-sm font-semibold text-white">Diseño arquitectónico</span>
+                    <span class="rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-sm font-semibold text-white">Planos</span>
+                    <span class="rounded-full border border-white/15 bg-white/10 px-3.5 py-2 text-sm font-semibold text-white">Distribución</span>
+                </div>
             </div>
-            <div class="lg:col-span-7">
-                <img src="assets/galeria-070.jpeg" alt="Directiva de UPN y representantes de Camina Conmigo durante la entrega del proyecto" class="w-full aspect-video rounded-[24px] object-cover shadow-2xl mb-4" loading="lazy">
-                <div class="grid grid-cols-2 gap-4">
-                    <img src="assets/galeria-041.jpeg" alt="Maqueta y diseño arquitectónico desarrollados con la Universidad Privada del Norte" class="w-full aspect-[4/3] rounded-[18px] object-cover" loading="lazy">
-                    <img src="assets/galeria-060.jpeg" alt="Representantes de UPN y Camina Conmigo durante la presentación del proyecto" class="w-full aspect-[4/3] rounded-[18px] object-cover" loading="lazy">
+
+            <div class="lg:col-span-7 relative pb-14 sm:pb-20 md:pl-6">
+                <div class="absolute -top-5 -right-5 w-[88%] h-[78%] rounded-[34px] bg-amarillo" aria-hidden="true"></div>
+                <figure class="relative overflow-hidden rounded-[28px] border-[7px] border-white shadow-[0_28px_75px_rgba(0,0,0,0.40)]">
+                    <img src="assets/galeria-070.jpeg" alt="Directiva de UPN y representantes de Camina Conmigo durante la entrega del proyecto" class="w-full aspect-video object-cover" loading="lazy">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-4 sm:p-6 pt-16 bg-gradient-to-t from-oscuro/95 to-transparent text-white">
+                        <span class="etiqueta text-amarillo block">UN PROYECTO QUE TOMÓ FORMA</span>
+                        <span class="font-serif text-xl sm:text-2xl hidden sm:block mt-1">Conocimiento y compromiso puestos al servicio de la comunidad</span>
+                    </figcaption>
+                </figure>
+                <div class="absolute bottom-0 left-0 md:left-[-8px] w-[48%] max-w-[280px] rounded-[20px] overflow-hidden border-[6px] border-oscuro shadow-2xl rotate-[-2deg]">
+                    <img src="assets/galeria-041.jpeg" alt="Maqueta y diseño arquitectónico desarrollados con la Universidad Privada del Norte" class="w-full aspect-[4/3] object-cover" loading="lazy">
+                </div>
+                <div class="absolute -bottom-2 right-1 md:right-[-12px] w-[36%] max-w-[205px] rounded-[20px] overflow-hidden border-[6px] border-oscuro shadow-2xl rotate-[2deg]">
+                    <img src="assets/galeria-060.jpeg" alt="Representantes de UPN y Camina Conmigo durante la presentación del proyecto" class="w-full aspect-square object-cover" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- UNIMAQ Y CERCO -->
-    <section class="py-16 md:py-[100px] bg-white border-b border-gray-100">
-        <div class="max-w-site mx-auto px-6 reveal mb-20">
-            <div class="mb-10">
-                <span class="etiqueta text-institucional mb-2 block">ALIANZAS QUE SUMAN</span>
-                <h2 class="h2-main text-oscuro mb-4">Con el apoyo de UNIMAQ S.A.</h2>
-                <p class="parrafo text-texto-muted max-w-2xl">Con el fundamental apoyo de UNIMAQ S.A. se logró cercar el terreno donado, marcando físicamente el espacio de nuestro futuro.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="h-full">
-                    <img src="assets/galeria-015.jpeg" alt="Maquinaria de UNIMAQ durante los trabajos en el terreno donado" class="w-full h-full object-cover rounded-[24px] min-h-[300px] md:min-h-[400px]" loading="lazy">
+    <section class="py-16 md:py-[100px] bg-white border-b border-gray-100 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-28 -left-24 w-80 h-80 rounded-full bg-amarillo/25 blur-2xl"></div>
+            <div class="absolute top-20 -right-16 w-80 h-80 rounded-full bg-institucional/[0.07] blur-2xl"></div>
+            <div class="absolute inset-x-0 top-0 h-3 bg-[repeating-linear-gradient(135deg,#F7D900_0px,#F7D900_18px,#092C5C_18px,#092C5C_36px)]"></div>
+            <img src="assets/logo-unimaq-cajamarca.png" alt="" class="absolute right-[4%] top-28 w-64 opacity-[0.055] hidden lg:block grayscale">
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 reveal mb-16 md:mb-20 relative z-10">
+            <div class="grid lg:grid-cols-12 items-center gap-8 lg:gap-14 mb-12">
+                <div class="lg:col-span-8 border-l-[7px] border-amarillo pl-5 sm:pl-7">
+                    <span class="etiqueta text-institucional mb-3 block">ALIANZAS QUE SUMAN</span>
+                    <h2 class="h2-main text-oscuro mb-4">Con el apoyo de UNIMAQ S.A.</h2>
+                    <p class="parrafo text-texto-muted max-w-3xl">Con el fundamental apoyo de UNIMAQ S.A. se logró cercar el terreno donado, marcando físicamente el espacio de nuestro futuro.</p>
                 </div>
-                <div class="grid grid-rows-2 gap-4">
-                    <img src="assets/galeria-020.jpeg" alt="Avance de la construcción del cerco con apoyo de UNIMAQ" class="w-full h-full object-cover rounded-[24px]" loading="lazy">
-                    <img src="assets/galeria-029.jpeg" alt="Muros del terreno durante la etapa de cercado" class="w-full h-full object-cover rounded-[24px]" loading="lazy">
+                <div class="lg:col-span-4 justify-self-start lg:justify-self-end rounded-[24px] border border-gray-100 bg-white p-5 shadow-[0_18px_45px_rgba(9,44,92,0.12)] rotate-[-1deg]">
+                    <img src="assets/logo-unimaq-cajamarca.png" alt="Logo de UNIMAQ Cajamarca y CAT Rental Store" class="h-16 sm:h-20 w-auto object-contain">
+                    <p class="mt-3 text-sm font-semibold text-texto-muted text-center">Una alianza que construye futuro</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5 items-stretch">
+                <figure class="md:col-span-7 relative min-h-[320px] md:min-h-[470px] rounded-[28px] overflow-hidden shadow-[0_24px_60px_rgba(9,44,92,0.20)] border-[7px] border-white">
+                    <img src="assets/galeria-015.jpeg" alt="Maquinaria de UNIMAQ durante los trabajos en el terreno donado" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <figcaption class="absolute inset-x-0 bottom-0 p-5 sm:p-7 pt-24 bg-gradient-to-t from-oscuro/90 to-transparent text-white">
+                        <span class="etiqueta text-amarillo block">TRABAJO EN EQUIPO</span>
+                        <span class="font-serif text-xl sm:text-2xl block mt-1">El terreno comenzó a prepararse para su futuro</span>
+                    </figcaption>
+                </figure>
+                <div class="md:col-span-5 grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-5">
+                    <figure class="relative rounded-[24px] overflow-hidden shadow-lg border-[6px] border-white min-h-[160px] md:min-h-0">
+                        <img src="assets/galeria-020.jpeg" alt="Avance de la construcción del cerco con apoyo de UNIMAQ" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 left-3 rounded-full bg-amarillo px-3 py-1 text-xs font-bold text-oscuro">AVANCE</span>
+                    </figure>
+                    <figure class="relative rounded-[24px] overflow-hidden shadow-lg border-[6px] border-white min-h-[160px] md:min-h-0">
+                        <img src="assets/galeria-029.jpeg" alt="Muros del terreno durante la etapa de cercado" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <span class="absolute top-3 left-3 rounded-full bg-institucional px-3 py-1 text-xs font-bold text-white">CONSTRUCCIÓN</span>
+                    </figure>
                 </div>
             </div>
         </div>
 
-        <div class="max-w-site mx-auto w-[calc(100%_-_2rem)] md:w-auto reveal bg-secundario p-6 sm:p-8 md:p-12 rounded-[28px] md:rounded-[32px]">
-            <h2 class="h3-main text-oscuro mb-8 text-center font-serif">Un objetivo cumplido: El cerco perimétrico</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="relative rounded-[20px] overflow-hidden">
-                    <img src="assets/galeria-015.jpeg" alt="Trabajos de cercado durante la intervención de UNIMAQ" class="w-full aspect-video object-cover" loading="lazy">
-                    <div class="absolute top-4 left-4 bg-oscuro/80 backdrop-blur-sm text-white px-3 py-1 rounded text-sm font-semibold">Durante</div>
+        <div class="max-w-site mx-auto w-[calc(100%_-_2rem)] md:w-auto reveal relative z-10 bg-secundario p-6 sm:p-8 md:p-12 rounded-[28px] md:rounded-[36px] border border-institucional/10 shadow-[0_20px_55px_rgba(9,44,92,0.10)] overflow-hidden">
+            <div class="absolute -top-16 -right-12 w-56 h-56 rounded-full border-[32px] border-amarillo/30" aria-hidden="true"></div>
+            <div class="relative z-10">
+                <span class="etiqueta text-institucional mb-3 block text-center">ANTES Y DESPUÉS</span>
+                <h2 class="h3-main text-oscuro mb-8 text-center font-serif">Un objetivo cumplido: El cerco perimétrico</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="relative rounded-[22px] overflow-hidden shadow-lg border-[5px] border-white">
+                        <img src="assets/galeria-015.jpeg" alt="Trabajos de cercado durante la intervención de UNIMAQ" class="w-full aspect-video object-cover" loading="lazy">
+                        <div class="absolute top-4 left-4 bg-oscuro/85 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">Durante</div>
+                    </div>
+                    <div class="relative rounded-[22px] overflow-hidden shadow-lg border-[5px] border-white">
+                        <img src="assets/galeria-084.jpeg" alt="Resultado final del cerco perimétrico" class="w-full aspect-video object-cover" loading="lazy">
+                        <div class="absolute top-4 left-4 bg-institucional/90 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">Resultado</div>
+                    </div>
                 </div>
-                <div class="relative rounded-[20px] overflow-hidden">
-                    <img src="assets/galeria-084.jpeg" alt="Resultado final del cerco perimétrico" class="w-full aspect-video object-cover" loading="lazy">
-                    <div class="absolute top-4 left-4 bg-institucional/90 backdrop-blur-sm text-white px-3 py-1 rounded text-sm font-semibold">Resultado</div>
-                </div>
+                <p class="text-center mt-7 text-texto-muted parrafo max-w-3xl mx-auto">Se logró culminar el cerco perimétrico del terreno, asegurando el perímetro para las futuras fases de construcción.</p>
             </div>
-            <p class="text-center mt-6 text-texto-muted parrafo">Se logró culminar el cerco perimétrico del terreno, asegurando el perímetro para las futuras fases de construcción.</p>
         </div>
     </section>
 
@@ -779,18 +831,39 @@
     </section>
 
     <!-- GRAN GALERÍA -->
-    <section id="galeria" class="py-16 md:py-[100px] bg-white">
-        <div class="max-w-site mx-auto px-6 reveal mb-12">
-            <div class="text-center mb-10">
-                <span class="etiqueta text-institucional mb-3 block">ARCHIVO CAMINA CONMIGO</span>
-                <h2 class="h2-main text-oscuro mb-4">Nuestro camino en imágenes</h2>
-                <p class="parrafo text-texto-muted max-w-3xl mx-auto">
-                    Una historia construida con personas, proyectos, encuentros y momentos que merecen ser recordados. Explora nuestras 100 fotografías originales.
-                </p>
+    <section id="galeria" class="py-16 md:py-[100px] bg-white relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-32 -left-28 w-96 h-96 rounded-full bg-institucional/[0.07] blur-2xl"></div>
+            <div class="absolute top-24 -right-24 w-96 h-96 rounded-full bg-amarillo/25 blur-2xl"></div>
+            <div class="absolute inset-x-0 top-0 h-[520px] opacity-[0.08]" style="background-image: radial-gradient(rgba(11,77,162,.55) 1.2px, transparent 1.2px); background-size: 26px 26px; -webkit-mask-image: linear-gradient(to bottom, black, transparent); mask-image: linear-gradient(to bottom, black, transparent);"></div>
+            <img src="assets/galeria-085.jpeg" alt="" class="absolute top-20 -left-10 w-72 h-52 object-cover rounded-[24px] opacity-[0.075] rotate-[-8deg] hidden md:block">
+            <img src="assets/galeria-094.jpeg" alt="" class="absolute top-28 -right-8 w-72 h-52 object-cover rounded-[24px] opacity-[0.075] rotate-[8deg] hidden md:block">
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 reveal mb-12 relative z-10">
+            <div class="relative max-w-4xl mx-auto text-center mb-10 rounded-[30px] md:rounded-[38px] bg-white/90 border border-institucional/10 px-7 py-10 md:px-16 md:py-12 shadow-[0_22px_60px_rgba(9,44,92,0.11)] backdrop-blur-sm overflow-visible">
+                <div class="absolute -top-7 -left-6 w-24 h-24 rounded-[18px] bg-white p-1.5 shadow-xl rotate-[-8deg] hidden lg:block" aria-hidden="true">
+                    <img src="assets/galeria-005.jpeg" alt="" class="w-full h-full object-cover rounded-[13px]">
+                </div>
+                <div class="absolute -bottom-7 -right-6 w-28 h-28 rounded-[18px] bg-white p-1.5 shadow-xl rotate-[7deg] hidden lg:block" aria-hidden="true">
+                    <img src="assets/galeria-090.jpeg" alt="" class="w-full h-full object-cover rounded-[13px]">
+                </div>
+                <div class="relative z-10">
+                    <span class="etiqueta text-white bg-institucional rounded-full px-4 py-2.5 mb-5 inline-flex items-center gap-2 shadow-md"><span aria-hidden="true">▣</span> ARCHIVO CAMINA CONMIGO</span>
+                    <h2 class="h2-main text-oscuro mb-4">Nuestro camino en imágenes</h2>
+                    <p class="parrafo text-texto-muted max-w-3xl mx-auto">
+                        Una historia construida con personas, proyectos, encuentros y momentos que merecen ser recordados. Explora nuestras 100 fotografías originales.
+                    </p>
+                    <div class="flex items-center justify-center gap-2 mt-6" aria-hidden="true">
+                        <span class="w-9 h-1 rounded-full bg-rojo"></span>
+                        <span class="w-9 h-1 rounded-full bg-amarillo"></span>
+                        <span class="w-9 h-1 rounded-full bg-institucional"></span>
+                    </div>
+                </div>
             </div>
 
             <!-- FILTROS -->
-            <div class="flex overflow-x-auto no-scrollbar gap-3 justify-start md:justify-center pb-4 mb-8">
+            <div class="flex overflow-x-auto no-scrollbar gap-3 justify-start md:justify-center p-3 mb-9 rounded-[24px] bg-white/90 border border-gray-100 shadow-[0_14px_38px_rgba(9,44,92,0.09)] backdrop-blur-sm">
                 <button class="filter-btn bg-institucional text-white px-5 py-2 rounded-full text-sm font-medium flex-shrink-0 transition-colors" data-filter="all">Todas</button>
                 <button class="filter-btn bg-secundario text-texto-main hover:bg-gray-200 px-5 py-2 rounded-full text-sm font-medium flex-shrink-0 transition-colors" data-filter="nacimiento">Nacimiento</button>
                 <button class="filter-btn bg-secundario text-texto-main hover:bg-gray-200 px-5 py-2 rounded-full text-sm font-medium flex-shrink-0 transition-colors" data-filter="terreno">Terreno</button>
@@ -800,7 +873,7 @@
             </div>
 
             <!-- Las 100 fotografías se insertan aquí desde el inventario verificado al final del archivo. -->
-            <div class="masonry-grid" id="gallery-grid" aria-live="polite"></div>
+            <div class="masonry-grid relative" id="gallery-grid" aria-live="polite"></div>
             <noscript><p class="rounded-2xl bg-red-50 p-5 text-center text-rojo">Activa JavaScript para ver la galería fotográfica completa.</p></noscript>
         </div>
     </section>
