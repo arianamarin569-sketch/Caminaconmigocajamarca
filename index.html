@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Camina Conmigo Cajamarca | Asociación Civil</title>
-    <meta name="description" content="ONG Camina Conmigo en Cajamarca. Trabajamos para revalorizar e integrar a los niños con habilidades especiales de las zonas rurales de Cajamarca que viven en situación de extrema pobreza.">
+    <meta name="description" content="ONG Camina Conmigo en Cajamarca. Trabajamos para revalorizar e integrar a niños con habilidades especiales que viven en situación de extrema pobreza.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://caminaconmigocajamarca.pe/">
     
@@ -146,27 +146,29 @@
         }
         .video-card:hover .play-overlay { background: rgba(9,44,92,0.2); }
         .play-btn {
-            width: 72px; height: 72px;
+            width: 56px; height: 56px;
             background: #D71920; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             color: white; padding-left: 4px;
             box-shadow: 0 8px 24px rgba(215,25,32,0.3);
             transition: transform 0.3s ease;
         }
+        @media (min-width: 640px) { .play-btn { width: 72px; height: 72px; } }
         .video-card:hover .play-btn { transform: scale(1.1); }
 
         /* Hide scrollbar for smooth gallery filters */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .filter-btn { min-height: 44px; }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- HEADER -->
-    <header class="sticky top-0 z-[1000] h-[82px] bg-white/95 backdrop-blur-[14px] border-b border-gray-100 flex items-center transition-all duration-300">
-        <div class="max-w-site mx-auto px-6 w-full flex justify-between items-center">
+    <header class="sticky top-0 z-[1000] h-[74px] md:h-[82px] bg-white/95 backdrop-blur-[14px] border-b border-gray-100 flex items-center transition-all duration-300">
+        <div class="max-w-site mx-auto px-5 sm:px-6 w-full flex justify-between items-center">
             <a href="#" class="flex-shrink-0">
-                <img src="assets/logo-camina-conmigo.png" alt="Logo oficial de la Asociación Civil ONG Camina Conmigo" class="h-[70px] md:h-[78px] object-contain py-1 rounded-full">
+                <img src="assets/logo-camina-conmigo.png" alt="Logo oficial de la Asociación Civil ONG Camina Conmigo" class="h-[62px] md:h-[78px] object-contain py-1 rounded-full">
             </a>
             
             <nav class="hidden lg:flex items-center gap-8">
@@ -183,44 +185,44 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="lg:hidden text-institucional p-2" id="mobile-menu-btn" aria-label="Menú">
+            <button class="lg:hidden text-institucional p-2" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
                 <i data-lucide="menu" class="w-7 h-7"></i>
             </button>
         </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-oscuro z-[1001] hidden flex-col justify-center items-center gap-6 opacity-0 transition-opacity">
-        <button id="close-menu-btn" class="absolute top-6 right-6 text-white p-2">
+    <div id="mobile-menu" class="fixed inset-0 bg-oscuro z-[1001] hidden flex-col justify-center items-center gap-1 sm:gap-3 opacity-0 transition-opacity overflow-y-auto px-6 py-20">
+        <button id="close-menu-btn" class="absolute top-5 right-5 text-white p-3" aria-label="Cerrar menú">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
-        <a href="#inicio" class="text-white text-2xl font-serif mobile-link">Inicio</a>
-        <a href="#historia" class="text-white text-2xl font-serif mobile-link">Nuestra historia</a>
-        <a href="#proyecto" class="text-white text-2xl font-serif mobile-link">Proyecto Clínica Hogar</a>
-        <a href="#momentos" class="text-white text-2xl font-serif mobile-link">Momentos</a>
-        <a href="#galeria" class="text-white text-2xl font-serif mobile-link">Galería</a>
-        <a href="#ayuda" class="text-white text-2xl font-serif mobile-link">Cómo ayudar</a>
+        <a href="#inicio" class="text-white text-2xl font-serif mobile-link py-2">Inicio</a>
+        <a href="#historia" class="text-white text-2xl font-serif mobile-link py-2">Nuestra historia</a>
+        <a href="#proyecto" class="text-white text-2xl font-serif mobile-link py-2 text-center">Proyecto Clínica Hogar</a>
+        <a href="#momentos" class="text-white text-2xl font-serif mobile-link py-2">Momentos</a>
+        <a href="#galeria" class="text-white text-2xl font-serif mobile-link py-2">Galería</a>
+        <a href="#ayuda" class="text-white text-2xl font-serif mobile-link py-2">Cómo ayudar</a>
         <a href="#ayuda" class="btn-rojo mt-4 mobile-link">QUIERO AYUDAR</a>
     </div>
 
     <!-- HERO PRINCIPAL -->
-    <section id="inicio" class="relative min-h-[85vh] flex items-center bg-oscuro overflow-hidden">
+    <section id="inicio" class="relative min-h-[85vh] flex items-center bg-oscuro overflow-hidden py-16 pb-24 sm:py-20">
         <div class="absolute inset-0 z-0">
             <img src="assets/hero-visita-navidena.jpeg" alt="Visita navideña de Camina Conmigo junto a familias de las zonas rurales de Cajamarca" class="w-full h-full object-cover object-center opacity-90" fetchpriority="high">
             <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(9,44,92,.82) 0%, rgba(9,44,92,.58) 45%, rgba(9,44,92,.15) 100%);"></div>
         </div>
         
-        <div class="max-w-site mx-auto px-6 w-full relative z-10 md:pl-[12%]">
+        <div class="max-w-site mx-auto px-5 sm:px-6 w-full relative z-10 md:pl-[12%]">
             <div class="max-w-[620px] reveal">
                 <span class="etiqueta text-amarillo mb-4 block">ASOCIACIÓN CIVIL ONG · CAJAMARCA</span>
                 <h1 class="h1-hero text-white mb-4">CAMINA CONMIGO</h1>
-                <p class="text-[clamp(1.2rem,2vw,1.7rem)] leading-snug font-serif text-amarillo/95 mb-6">Trabajamos para revalorizar e integrar a los niños con habilidades especiales de las zonas rurales de Cajamarca que viven en situación de extrema pobreza.</p>
+                <p class="text-[clamp(1.2rem,2vw,1.7rem)] leading-snug font-serif text-amarillo/95 mb-6">Trabajamos para revalorizar e integrar a niños con habilidades especiales que viven en situación de extrema pobreza.</p>
                 <p class="parrafo text-white/90 mb-10 max-w-[580px]">
-                    Acompañamos a niños, jóvenes y familias de las zonas rurales de Cajamarca, promoviendo inclusión, solidaridad y oportunidades.
+                    Acompañamos .
                 </p>
                 <div class="flex flex-wrap gap-4 items-center">
-                    <a href="#ayuda" class="btn-rojo">QUIERO AYUDAR</a>
-                    <a href="#historia" class="px-6 py-[14px] text-white font-semibold rounded-full border border-white/30 hover:bg-white hover:text-oscuro transition-colors">CONOCE NUESTRA HISTORIA</a>
+                    <a href="#ayuda" class="btn-rojo w-full sm:w-auto">QUIERO AYUDAR</a>
+                    <a href="#historia" class="w-full sm:w-auto px-6 py-[14px] text-center text-white font-semibold rounded-full border border-white/30 hover:bg-white hover:text-oscuro transition-colors">CONOCE NUESTRA HISTORIA</a>
                 </div>
             </div>
         </div>
@@ -275,9 +277,9 @@
                             <div class="w-12 h-12 rounded-full bg-rojo text-white flex items-center justify-center shadow-md" aria-hidden="true">♥</div>
                             <div>
                                 <h3 class="text-2xl font-serif text-oscuro mb-2">Donaciones</h3>
-                                <p class="text-[15px] leading-relaxed text-texto-muted mb-4">¿Deseas realizar una donación monetaria? Comunícate directamente con Gladis Abanto por WhatsApp y recibe la información necesaria para realizar tu aporte.</p>
+                                <p class="text-[15px] leading-relaxed text-texto-muted mb-4">¿Deseas realizar una donación monetaria? Comunícate directamente con la fundadora Gladis Abanto y recibe la información necesaria para realizar tu aporte.</p>
                                 <a href="https://wa.me/51976003882?text=Hola%20Gladis.%20Conoc%C3%AD%20Camina%20Conmigo%20a%20trav%C3%A9s%20de%20su%20p%C3%A1gina%20web%20y%20quisiera%20realizar%20una%20donaci%C3%B3n.%20%C2%BFPodr%C3%ADa%20brindarme%20informaci%C3%B3n%3F" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-rojo hover:text-oscuro transition-colors">
-                                    CONTACTAR POR WHATSAPP <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                                    CONTACTAR <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                                 </a>
                             </div>
                         </article>
@@ -299,17 +301,72 @@
     </section>
 
     <!-- VIDEO INTRODUCTORIO -->
-    <section class="seccion-padding bg-white">
-        <div class="max-w-site mx-auto px-6 flex flex-col items-center text-center reveal">
-            <span class="etiqueta text-institucional mb-3">CONOCE NUESTRA HISTORIA</span>
-            <h2 class="h2-main text-oscuro mb-4">Así nació Camina Conmigo</h2>
-            <p class="parrafo text-texto-muted max-w-2xl mb-12">Un recorrido visual por nuestros orígenes y el propósito que nos impulsa cada día.</p>
-            
-            <div class="w-full max-w-[900px] aspect-video rounded-[24px] overflow-hidden relative cursor-pointer video-card shadow-lg" onclick="openVideoModal('ViPfNsv5pBw')">
-                <img src="assets/galeria-089.jpeg" alt="Equipo histórico de Camina Conmigo durante una campaña solidaria" class="w-full h-full object-cover" loading="eager">
-                <div class="absolute inset-0 play-overlay flex items-center justify-center">
-                    <div class="play-btn">
-                        <i data-lucide="play" class="w-8 h-8 fill-white"></i>
+    <section class="relative overflow-hidden py-16 md:py-[110px] bg-gradient-to-br from-[#EAF4FF] via-[#FFFDF8] to-[#FFF1A8]">
+        <!-- Un camino visual que representa el acompañamiento de la organización -->
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <div class="absolute -top-40 -left-28 w-[430px] h-[430px] rounded-full bg-institucional/10 blur-2xl"></div>
+            <div class="absolute top-20 -right-28 w-[390px] h-[390px] rounded-full bg-amarillo/35 blur-2xl"></div>
+            <div class="absolute -bottom-24 left-[8%] w-64 h-64 rounded-full bg-rojo/10 blur-2xl"></div>
+            <div class="absolute inset-0 opacity-35" style="background-image: radial-gradient(rgba(11,77,162,.22) 1.2px, transparent 1.2px); background-size: 27px 27px; -webkit-mask-image: linear-gradient(to bottom, black, transparent 72%); mask-image: linear-gradient(to bottom, black, transparent 72%);"></div>
+            <svg class="absolute inset-x-0 bottom-0 w-full h-[72%] text-institucional/20" viewBox="0 0 1400 620" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-60 520C170 290 330 560 555 380C765 212 880 410 1070 235C1175 138 1280 150 1460 300" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="13 18"/>
+                <circle cx="208" cy="390" r="9" fill="#F7D900" stroke="#FFFDF8" stroke-width="6"/>
+                <circle cx="713" cy="295" r="9" fill="#D71920" stroke="#FFFDF8" stroke-width="6"/>
+                <circle cx="1120" cy="198" r="9" fill="#0B4DA2" stroke="#FFFDF8" stroke-width="6"/>
+            </svg>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 relative z-10">
+            <div class="max-w-3xl mx-auto flex flex-col items-center text-center reveal">
+                <span class="inline-flex max-w-full items-center gap-2.5 rounded-full bg-white/85 border border-institucional/10 px-4 sm:px-5 py-2.5 mb-5 shadow-[0_8px_28px_rgba(9,44,92,0.10)] backdrop-blur-sm">
+                    <span class="flex gap-1" aria-hidden="true">
+                        <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-rojo"></span>
+                        <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amarillo"></span>
+                        <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-institucional"></span>
+                    </span>
+                    <span class="etiqueta text-institucional">CONOCE NUESTRA HISTORIA</span>
+                </span>
+                <h2 class="h2-main text-oscuro mb-5">Así nació Camina Conmigo</h2>
+                <div class="flex items-center justify-center gap-3 mb-5" aria-hidden="true">
+                    <span class="h-px w-14 bg-rojo/50"></span>
+                    <span class="w-9 h-9 rounded-full bg-rojo text-white flex items-center justify-center shadow-md">♥</span>
+                    <span class="h-px w-14 bg-rojo/50"></span>
+                </div>
+                <p class="parrafo text-texto-main max-w-2xl mb-7">Un recorrido visual por nuestros orígenes y el propósito que nos impulsa cada día.</p>
+                <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-10 sm:mb-12" aria-label="Valores que guían a Camina Conmigo">
+                    <span class="rounded-full bg-white/80 border border-white px-3.5 sm:px-4 py-2 text-[13px] sm:text-sm font-semibold text-institucional shadow-sm">Acompañamiento</span>
+                    <span class="rounded-full bg-[#FFF6B8] border border-amarillo/50 px-3.5 sm:px-4 py-2 text-[13px] sm:text-sm font-semibold text-[#725C00] shadow-sm">Inclusión</span>
+                    <span class="rounded-full bg-white/80 border border-white px-3.5 sm:px-4 py-2 text-[13px] sm:text-sm font-semibold text-rojo shadow-sm">Oportunidades</span>
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-[980px] mx-auto reveal">
+                <div class="absolute -inset-3 md:-inset-6 rounded-[34px] md:rounded-[44px] bg-white/65 border border-white shadow-[0_28px_80px_rgba(9,44,92,0.14)] -rotate-1 backdrop-blur-sm" aria-hidden="true"></div>
+                <div class="absolute -top-7 -right-3 md:-right-10 w-24 h-24 md:w-32 md:h-32 rounded-full bg-amarillo border-[10px] border-white/75 shadow-lg" aria-hidden="true"></div>
+                <div class="absolute -bottom-8 -left-4 md:-left-12 flex items-end gap-2" aria-hidden="true">
+                    <span class="w-4 h-16 rounded-full bg-rojo"></span>
+                    <span class="w-4 h-24 rounded-full bg-amarillo"></span>
+                    <span class="w-4 h-12 rounded-full bg-institucional"></span>
+                </div>
+
+                <button type="button" class="block w-full aspect-video rounded-[26px] md:rounded-[34px] overflow-hidden relative cursor-pointer video-card shadow-[0_24px_65px_rgba(9,44,92,0.28)] border-[6px] md:border-[9px] border-white group text-left" onclick="openVideoModal('ViPfNsv5pBw')" aria-label="Reproducir el video sobre la historia de Camina Conmigo">
+                    <img src="assets/galeria-089.jpeg" alt="Equipo histórico de Camina Conmigo durante una campaña solidaria" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]" loading="eager">
+                    <span class="absolute inset-0 play-overlay flex items-center justify-center">
+                        <span class="play-btn">
+                            <i data-lucide="play" class="w-8 h-8 fill-white"></i>
+                        </span>
+                    </span>
+                    <span class="absolute inset-x-0 bottom-0 block p-3 sm:p-5 md:p-7 bg-gradient-to-t from-oscuro/90 via-oscuro/35 to-transparent text-white">
+                        <span class="etiqueta text-amarillo mb-1 block">NUESTROS PRIMEROS PASOS</span>
+                        <span class="font-serif text-xl md:text-2xl hidden sm:block">Una historia construida caminando juntos</span>
+                    </span>
+                </button>
+
+                <div class="absolute -bottom-8 sm:-bottom-9 right-2 sm:right-4 md:right-10 rounded-2xl bg-white px-4 sm:px-5 py-3 sm:py-3.5 shadow-[0_14px_34px_rgba(9,44,92,0.18)] border border-institucional/10 flex items-center gap-2.5 sm:gap-3">
+                    <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-institucional text-white flex items-center justify-center" aria-hidden="true">♥</span>
+                    <div>
+                        <p class="text-[11px] uppercase tracking-[.14em] font-semibold text-texto-muted">Desde Cajamarca</p>
+                        <p class="font-serif text-lg text-oscuro leading-tight">Caminamos juntos</p>
                     </div>
                 </div>
             </div>
@@ -321,8 +378,8 @@
         <div class="max-w-site mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal">
                 <div class="relative">
-                    <img src="assets/acompanamiento-humano.jpeg" alt="Integrantes de Camina Conmigo acompañando a una joven beneficiaria en Cajamarca" class="w-full h-[520px] object-cover object-center rounded-[32px] shadow-xl" loading="lazy">
-                    <div class="absolute -bottom-5 left-5 md:left-8 bg-white px-6 py-4 rounded-2xl shadow-xl border border-gray-100">
+                    <img src="assets/acompanamiento-humano.jpeg" alt="Integrantes de Camina Conmigo acompañando a una joven beneficiaria en Cajamarca" class="w-full h-[390px] sm:h-[520px] object-cover object-center rounded-[26px] sm:rounded-[32px] shadow-xl" loading="lazy">
+                    <div class="absolute -bottom-5 left-4 right-4 sm:right-auto sm:left-8 bg-white px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl shadow-xl border border-gray-100">
                         <p class="text-sm font-semibold uppercase tracking-widest text-rojo">Acompañamiento</p>
                         <p class="font-serif text-2xl text-oscuro">Integral y humano</p>
                     </div>
@@ -364,9 +421,6 @@
                     <blockquote class="relative border-l-4 border-amarillo pl-6 font-serif text-[28px] lg:text-[38px] text-amarillo leading-tight mb-7">
                         "Caminar juntos nos ayuda a seguir adelante."
                     </blockquote>
-                    <a href="https://www.facebook.com/photo/?fbid=419855616967652&set=a.419855570300990" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white font-semibold border-b border-white/50 pb-1 hover:text-amarillo hover:border-amarillo transition-colors">
-                        Conoce el origen del logo <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -426,12 +480,12 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 relative pb-14 md:pb-20 md:pl-10">
+                <div class="lg:col-span-7 relative pb-20 md:pb-28 md:pl-10">
                     <div class="absolute top-8 left-0 w-[88%] h-[88%] rounded-[34px] bg-amarillo" aria-hidden="true"></div>
                     <figure class="relative overflow-hidden rounded-[34px] shadow-[0_28px_70px_rgba(9,44,92,0.22)]">
                         <img src="assets/galeria-078.jpeg" alt="Presentación de la propuesta arquitectónica de la Clínica Hogar" class="w-full aspect-[4/3] object-cover" loading="lazy">
-                        <figcaption class="absolute top-0 left-0 right-0 bg-gradient-to-b from-oscuro/95 via-oscuro/70 to-transparent p-7 pb-24 text-white">
-                            <p class="font-serif text-2xl">Una visión que comenzó a tomar forma</p>
+                        <figcaption class="absolute top-0 left-0 right-0 bg-gradient-to-b from-oscuro/95 via-oscuro/70 to-transparent p-5 pb-16 sm:p-7 sm:pb-24 text-white">
+                            <p class="font-serif text-xl sm:text-2xl">Una visión que comenzó a tomar forma</p>
                             <p class="text-sm text-white/75 mt-1">Presentación de los espacios proyectados para la Clínica Hogar.</p>
                         </figcaption>
                     </figure>
@@ -452,8 +506,8 @@
                     </div>
                     <p class="parrafo text-texto-main mb-7">La iniciativa cuenta con importantes bases para continuar su desarrollo, entre ellas el <strong>terreno donado</strong> y la <strong>conclusión del perfil técnico</strong>, que permiten seguir impulsando alianzas, apoyo institucional y financiamiento para su ejecución.</p>
                     <div class="flex flex-wrap gap-x-8 gap-y-3">
-                        <span class="inline-flex items-center gap-2 font-semibold text-institucional"><i data-lucide="check" class="w-5 h-5 text-rojo"></i> Terreno donado</span>
-                        <span class="inline-flex items-center gap-2 font-semibold text-institucional"><i data-lucide="check" class="w-5 h-5 text-rojo"></i> Perfil técnico concluido</span>
+                        <a href="#donacion-terreno" class="inline-flex items-center gap-2 font-semibold text-institucional hover:text-rojo transition-colors"><i data-lucide="check" class="w-5 h-5 text-rojo"></i> Terreno donado</a>
+                        <a href="#perfil-tecnico" class="inline-flex items-center gap-2 font-semibold text-institucional hover:text-rojo transition-colors"><i data-lucide="check" class="w-5 h-5 text-rojo"></i> Perfil técnico concluido</a>
                     </div>
                 </div>
                 <div class="lg:col-span-5 lg:border-l lg:border-institucional/20 lg:pl-12">
@@ -473,7 +527,7 @@
                         <h3 class="h3-main text-white mb-4">Ayúdanos a seguir avanzando</h3>
                         <p class="parrafo text-white/85 mb-8 max-w-3xl">Cada aporte contribuye a seguir avanzando hacia la Clínica Hogar Camina Conmigo. Tu apoyo puede ayudarnos a gestionar los recursos necesarios para convertir esta iniciativa en un espacio de atención y rehabilitación para quienes más lo necesitan.</p>
                         <div class="flex flex-wrap items-center gap-5">
-                            <a href="#donar-paypal" aria-controls="donar-paypal" onclick="document.getElementById('donar-paypal').scrollIntoView({behavior:'smooth', block:'start'}); return false;" class="inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-7 py-4 font-bold text-white hover:bg-amarillo hover:text-oscuro transition-colors shadow-lg">
+                            <a href="#aporte-directo" aria-controls="aporte-directo" onclick="document.getElementById('aporte-directo').scrollIntoView({behavior:'smooth', block:'center'}); return false;" class="inline-flex items-center justify-center gap-2 rounded-full bg-rojo px-7 py-4 font-bold text-white hover:bg-amarillo hover:text-oscuro transition-colors shadow-lg">
                                 <span aria-hidden="true">❤️</span> QUIERO AYUDAR <i data-lucide="arrow-down" class="w-5 h-5"></i>
                             </a>
                             <button type="button" class="inline-flex items-center gap-2 text-white/90 font-semibold hover:text-amarillo transition-colors" onclick="openLightbox('assets/galeria-001.jpeg', 'Brochure del Proyecto Clínica Hogar')">
@@ -482,7 +536,7 @@
                         </div>
                     </div>
                     <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
-                        <img src="assets/galeria-074.jpeg" alt="Presentación pública del Proyecto Clínica Hogar Camina Conmigo" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                        <img src="assets/galeria-074.jpeg" alt="Presentación pública del Proyecto Clínica Hogar Camina Conmigo" class="absolute inset-0 w-full h-full object-cover" style="object-position: 70% center;" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-r from-institucional via-institucional/25 to-transparent lg:block hidden"></div>
                         <div class="absolute inset-0 bg-gradient-to-t from-oscuro/75 to-transparent lg:hidden"></div>
                         <p class="absolute bottom-7 right-7 left-7 text-right text-sm font-semibold text-white drop-shadow-lg">Un sueño que avanza con cada alianza y cada aporte.</p>
@@ -493,7 +547,7 @@
     </section>
 
     <!-- DONACIÓN DEL TERRENO -->
-    <section id="donacion-terreno" class="py-16 md:py-[100px] bg-white">
+    <section id="donacion-terreno" class="py-16 md:py-[100px] bg-white scroll-mt-24">
         <div class="max-w-site mx-auto px-6 reveal">
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-16">
                 <div class="lg:w-[45%]">
@@ -515,7 +569,7 @@
     </section>
 
     <!-- UPN BLOCK -->
-    <section class="bg-oscuro py-16 md:py-24">
+    <section id="perfil-tecnico" class="bg-oscuro py-16 md:py-24 scroll-mt-24">
         <div class="max-w-site mx-auto px-6 grid lg:grid-cols-12 items-center gap-12 lg:gap-16 reveal">
             <div class="lg:col-span-5">
                 <span class="etiqueta text-amarillo mb-3 block">ALIANZA ACADÉMICA</span>
@@ -542,7 +596,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="h-full">
-                    <img src="assets/galeria-015.jpeg" alt="Maquinaria de UNIMAQ durante los trabajos en el terreno donado" class="w-full h-full object-cover rounded-[24px] min-h-[400px]" loading="lazy">
+                    <img src="assets/galeria-015.jpeg" alt="Maquinaria de UNIMAQ durante los trabajos en el terreno donado" class="w-full h-full object-cover rounded-[24px] min-h-[300px] md:min-h-[400px]" loading="lazy">
                 </div>
                 <div class="grid grid-rows-2 gap-4">
                     <img src="assets/galeria-020.jpeg" alt="Avance de la construcción del cerco con apoyo de UNIMAQ" class="w-full h-full object-cover rounded-[24px]" loading="lazy">
@@ -551,7 +605,7 @@
             </div>
         </div>
 
-        <div class="max-w-site mx-auto px-6 reveal bg-secundario p-8 md:p-12 rounded-[32px]">
+        <div class="max-w-site mx-auto w-[calc(100%_-_2rem)] md:w-auto reveal bg-secundario p-6 sm:p-8 md:p-12 rounded-[28px] md:rounded-[32px]">
             <h2 class="h3-main text-oscuro mb-8 text-center font-serif">Un objetivo cumplido: El cerco perimétrico</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="relative rounded-[20px] overflow-hidden">
@@ -784,16 +838,17 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
                 <!-- Donar -->
-                <article class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden">
+                <article id="aporte-directo" class="group relative bg-white/95 p-7 rounded-[28px] flex flex-col border border-white shadow-[0_12px_35px_rgba(9,44,92,0.08)] hover:-translate-y-2 hover:shadow-[0_22px_45px_rgba(9,44,92,0.14)] transition-all duration-300 overflow-hidden scroll-mt-28">
                     <div class="absolute inset-x-0 top-0 h-1.5 bg-rojo"></div>
                     <div class="w-14 h-14 bg-rojo/10 rounded-2xl flex items-center justify-center text-rojo mb-6 group-hover:scale-110 transition-transform">
                         <i data-lucide="heart" class="w-7 h-7"></i>
                     </div>
-                    <span class="etiqueta text-rojo text-[11px] mb-2 block">APORTE DIRECTO</span>
+                    <span class="etiqueta text-rojo text-[11px] mb-2 block">PORTE DIRECTO</span>
                     <h3 class="font-serif text-[26px] text-oscuro mb-3">Donar</h3>
-                    <p class="text-texto-muted text-[15px] leading-relaxed mb-7">Tu aporte sostiene nuestros programas, visitas y la logística necesaria para llegar a más familias.</p>
-                    <a href="#donar-paypal" aria-label="Ir a la donación segura con PayPal" class="mt-auto w-full rounded-full bg-rojo text-white px-5 py-3.5 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#B91419] transition-colors">
-                        DONAR CON PAYPAL <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <p class="text-texto-muted text-[15px] leading-relaxed mb-4">Tu aporte nos ayuda a continuar con nuestros programas, visitas y acciones de apoyo a las familias que acompañamos.</p>
+                    <p class="text-texto-muted text-[15px] leading-relaxed mb-7"><strong class="text-oscuro">¿Quieres realizar una donación?</strong> Contáctanos y te orientaremos sobre las distintas formas disponibles para hacer llegar tu aporte de manera fácil y segura.</p>
+                    <a href="https://wa.me/51976003882?text=Hola%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20las%20formas%20disponibles%20para%20realizar%20una%20donaci%C3%B3n%20a%20Camina%20Conmigo." target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp las formas disponibles para realizar una donación" class="mt-auto w-full rounded-full bg-rojo text-white px-5 py-3.5 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-[#B91419] transition-colors">
+                        CONTACTAR <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </article>
 
@@ -843,7 +898,7 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="h-[520px] relative flex items-center justify-center overflow-hidden">
+    <section class="h-[440px] sm:h-[520px] relative flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="assets/cierre-solidario.jpeg" alt="Camina Conmigo acompañando a una familia beneficiaria en Cajamarca" class="w-full h-full object-cover" loading="lazy">
             <div class="absolute inset-0 bg-oscuro/70"></div>
@@ -907,7 +962,7 @@
 
     <!-- BOTÓN FLOTANTE WHATSAPP -->
     <a href="https://wa.me/51976003882?text=Hola%20Camina%20Conmigo.%20Conocí%20su%20trabajo%20a%20través%20de%20la%20página%20web%20y%20quisiera%20saber%20cómo%20puedo%20ayudar." target="_blank" 
-       class="fixed bottom-6 right-6 w-[58px] h-[58px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50 group">
+       class="fixed bottom-[calc(1.25rem_+_env(safe-area-inset-bottom))] right-5 md:bottom-6 md:right-6 w-14 h-14 md:w-[58px] md:h-[58px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50 group">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
         <!-- Tooltip -->
         <span class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white text-oscuro text-sm font-medium px-4 py-2 rounded-lg shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
@@ -919,7 +974,7 @@
     
     <!-- Lightbox de Imagen -->
     <div id="lightbox" class="fixed inset-0 z-[2000] flex flex-col items-center justify-center hidden">
-        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
+        <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white p-3 bg-white/10 rounded-full hover:bg-white/20 transition" aria-label="Cerrar imagen ampliada">
             <i data-lucide="x" class="w-6 h-6"></i>
         </button>
         <div class="w-full h-full max-w-[90vw] max-h-[88vh] p-4 flex flex-col items-center justify-center">
@@ -930,14 +985,14 @@
 
     <!-- Video Modal -->
     <div id="video-modal" class="fixed inset-0 z-[2000] flex items-center justify-center hidden">
-        <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-white p-2 bg-white/10 rounded-full hover:bg-white/20 transition z-[2001]">
+        <button onclick="closeVideoModal()" class="absolute top-5 right-5 text-white p-3 bg-white/10 rounded-full hover:bg-white/20 transition z-[2001]" aria-label="Cerrar video">
             <i data-lucide="x" class="w-6 h-6"></i>
         </button>
         <div class="w-full max-w-[1000px] p-4 relative">
             <div id="video-container" class="w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
                 <!-- Iframe se inyecta por JS -->
             </div>
-            <a id="video-direct-link" href="https://www.youtube.com/@caminaconmigocajamarca906" target="_blank" rel="noopener noreferrer" class="mt-4 mx-auto w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-institucional shadow-lg hover:bg-amarillo transition-colors flex items-center gap-2">
+            <a id="video-direct-link" href="https://www.youtube.com/@caminaconmigocajamarca906" target="_blank" rel="noopener noreferrer" class="mt-4 mx-auto w-fit max-w-full rounded-full bg-white px-5 py-2.5 text-center text-sm font-semibold text-institucional shadow-lg hover:bg-amarillo transition-colors flex items-center justify-center gap-2">
                 Si el video no carga, verlo directamente en YouTube <i data-lucide="external-link" class="w-4 h-4"></i>
             </a>
         </div>
@@ -1010,12 +1065,18 @@
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
         function toggleMenu() {
-            if (mobileMenu.classList.contains('hidden')) {
+            const isOpening = mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(isOpening));
+            document.body.classList.toggle('overflow-hidden', isOpening);
+
+            if (isOpening) {
                 mobileMenu.classList.remove('hidden');
                 setTimeout(() => mobileMenu.classList.remove('opacity-0'), 10);
+                closeMenuBtn.focus();
             } else {
                 mobileMenu.classList.add('opacity-0');
                 setTimeout(() => mobileMenu.classList.add('hidden'), 300);
+                mobileMenuBtn.focus();
             }
         }
 
@@ -1173,6 +1234,7 @@
         // Cerrar modales con la tecla ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
+                if (!mobileMenu.classList.contains('hidden')) toggleMenu();
                 if (!lightbox.classList.contains('hidden')) closeLightbox();
                 if (!videoModal.classList.contains('hidden')) closeVideoModal();
             }
