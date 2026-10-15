@@ -133,10 +133,31 @@
         .masonry-item:hover img { transform: scale(1.02); }
 
         /* Lightbox Modals */
-        #lightbox, #video-modal {
+        #lightbox, #video-modal, #october-modal {
             backdrop-filter: blur(8px);
             background-color: rgba(9, 44, 92, 0.95);
             transition: opacity 0.3s ease;
+        }
+
+        #october-modal {
+            background:
+                radial-gradient(circle at 12% 16%, rgba(247, 217, 0, 0.22), transparent 26%),
+                radial-gradient(circle at 88% 82%, rgba(215, 25, 32, 0.2), transparent 28%),
+                rgba(5, 27, 58, 0.94);
+        }
+
+        .october-modal-card {
+            box-shadow: 0 28px 90px rgba(3, 18, 40, 0.45);
+        }
+
+        .october-photo {
+            box-shadow: 0 18px 42px rgba(9, 44, 92, 0.18);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .play-btn, .masonry-item img, .btn-rojo {
+                transition: none !important;
+            }
         }
         
         /* Play Button Overlay */
@@ -230,6 +251,89 @@
             <span class="text-white/60 texto-pequeno flex items-center gap-2">
                 <i data-lucide="map-pin" class="w-4 h-4"></i> Cajamarca · Perú
             </span>
+        </div>
+    </section>
+
+    <!-- DÍA NACIONAL DE LA PERSONA CON DISCAPACIDAD -->
+    <section id="dia-discapacidad" class="relative overflow-hidden bg-gradient-to-br from-[#FFF9CF] via-white to-[#E8F3FF] py-16 md:py-[104px] scroll-mt-24 border-b-4 border-amarillo">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <span class="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-amarillo/30 blur-3xl"></span>
+            <span class="absolute top-1/3 -right-24 w-72 h-72 rounded-full bg-institucional/15 blur-3xl"></span>
+            <span class="absolute bottom-10 left-[38%] w-44 h-44 rounded-full bg-rojo/10 blur-3xl"></span>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center mb-14 md:mb-20">
+                <div class="lg:col-span-7 reveal">
+                    <div class="inline-flex items-center gap-3 rounded-full bg-institucional px-4 py-2.5 text-white shadow-md mb-6">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-amarillo text-oscuro font-bold" aria-hidden="true">16</span>
+                        <span class="etiqueta text-white">VIERNES · OCTUBRE · PERÚ</span>
+                    </div>
+                    <h2 class="h2-main text-oscuro mb-6">16 de octubre: Día Nacional de la Persona con Discapacidad en el Perú</h2>
+                    <p class="parrafo text-texto-main mb-5">
+                        El <strong>16 de octubre</strong> no es una fecha más en el calendario peruano. Es un día para conmemorar las luchas históricas, celebrar la diversidad y, sobre todo, reafirmar nuestro compromiso con la <strong>inclusión real</strong>.
+                    </p>
+                    <blockquote class="relative overflow-hidden rounded-[26px] bg-rojo px-7 py-7 md:px-9 text-white shadow-[0_18px_45px_rgba(215,25,32,0.22)]">
+                        <span class="absolute -top-7 -right-2 text-[120px] leading-none font-serif text-white/15" aria-hidden="true">“</span>
+                        <p class="relative font-serif text-2xl md:text-3xl leading-snug">“Trabajemos por una igualdad de oportunidades, superemos esas brechas y eliminemos los obstáculos”.</p>
+                    </blockquote>
+                </div>
+
+                <div class="lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4 min-h-[430px] reveal" aria-label="Acompañamiento de Camina Conmigo en Cajamarca">
+                    <figure class="october-photo col-span-2 h-52 sm:h-60 rounded-[28px] overflow-hidden bg-white border-4 border-white">
+                        <img src="assets/acompanamiento-humano.jpeg" alt="Integrantes de Camina Conmigo acompañando a niños y familias en una comunidad de Cajamarca" class="w-full h-full object-cover" loading="lazy">
+                    </figure>
+                    <figure class="october-photo h-48 sm:h-56 rounded-[28px] overflow-hidden bg-white border-4 border-white -rotate-2">
+                        <img src="assets/testimonio-acompanado.jpeg" alt="Voluntarias de Camina Conmigo acompañando a un joven en una visita comunitaria" class="w-full h-full object-cover" loading="lazy">
+                    </figure>
+                    <figure class="october-photo h-48 sm:h-56 rounded-[28px] overflow-hidden bg-white border-4 border-white rotate-2">
+                        <img src="assets/visita-comunitaria.jpeg" alt="Familias reunidas durante una visita de Camina Conmigo en Cajamarca" class="w-full h-full object-cover" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch mb-12">
+                <article class="lg:col-span-5 rounded-[30px] bg-oscuro text-white p-7 md:p-10 shadow-[0_24px_60px_rgba(9,44,92,0.18)] reveal">
+                    <div class="flex items-center gap-4 mb-5">
+                        <span class="flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-amarillo text-oscuro font-serif text-2xl">1980</span>
+                        <h3 class="h3-main text-white">El origen de esta fecha</h3>
+                    </div>
+                    <p class="text-white/85 leading-relaxed mb-5">Este día recuerda la histórica movilización de <strong class="text-white">octubre de 1980</strong>, cuando miles de personas con discapacidad marcharon hacia el Congreso de la República. Su meta era clara: exigir que el Estado reconociera sus derechos y les otorgara las herramientas necesarias para desarrollarse plenamente en la sociedad.</p>
+                    <p class="text-white/85 leading-relaxed">Casi dos décadas después, este esfuerzo se formalizó legalmente, y hoy se respalda bajo la <strong class="text-amarillo">Ley N° 29973</strong> (Ley General de la Persona con Discapacidad), la cual busca garantizar el acceso equitativo a la salud, la educación, el empleo y la accesibilidad urbana.</p>
+                </article>
+
+                <article class="lg:col-span-7 rounded-[30px] bg-white p-7 md:p-10 border border-institucional/10 shadow-[0_24px_60px_rgba(9,44,92,0.12)] reveal">
+                    <span class="etiqueta text-rojo mb-3 block">UN COMPROMISO DE TODOS</span>
+                    <h3 class="h3-main text-oscuro mb-4">Hacia un Perú sin barreras</h3>
+                    <p class="text-texto-main leading-relaxed mb-7">Conmemorar este día nos invita a reflexionar sobre las tareas pendientes que tenemos como sociedad. La verdadera inclusión no consiste únicamente en habilitar rampas o accesos físicos; implica también:</p>
+
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="rounded-2xl bg-[#FFF2F2] border border-rojo/15 p-5">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-rojo text-white font-bold mb-4" aria-hidden="true">01</span>
+                            <h4 class="font-semibold text-oscuro mb-2">Eliminar prejuicios</h4>
+                            <p class="text-sm leading-relaxed text-texto-muted">Reconocer el talento y la capacidad de las personas por encima de cualquier condición.</p>
+                        </div>
+                        <div class="rounded-2xl bg-[#FFF9CF] border border-amarillo p-5">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-amarillo text-oscuro font-bold mb-4" aria-hidden="true">02</span>
+                            <h4 class="font-semibold text-oscuro mb-2">Garantizar oportunidades</h4>
+                            <p class="text-sm leading-relaxed text-texto-muted">Impulsar la inserción laboral justa y el acceso a una educación de calidad.</p>
+                        </div>
+                        <div class="rounded-2xl bg-[#EAF3FF] border border-institucional/20 p-5">
+                            <span class="flex h-10 w-10 items-center justify-center rounded-full bg-institucional text-white font-bold mb-4" aria-hidden="true">03</span>
+                            <h4 class="font-semibold text-oscuro mb-2">Construir empatía</h4>
+                            <p class="text-sm leading-relaxed text-texto-muted">Diseñar entornos físicos y digitales pensados para que todos podamos navegar e interactuar con autonomía.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="relative overflow-hidden rounded-[30px] bg-gradient-to-r from-institucional via-[#1260C3] to-[#0B4DA2] px-7 py-9 md:px-12 md:py-11 text-white reveal">
+                <div class="absolute -right-10 -top-14 w-48 h-48 rounded-full border-[28px] border-amarillo/25" aria-hidden="true"></div>
+                <div class="relative max-w-4xl">
+                    <p class="text-lg md:text-xl leading-relaxed text-white/90 mb-5">La discapacidad es una condición que se agrava cuando el entorno pone los obstáculos. Cambiar esa realidad y derribar las barreras es una responsabilidad compartida entre el Estado, las empresas, las comunidades y cada uno de nosotros.</p>
+                    <p class="font-serif text-2xl md:text-4xl text-amarillo">¡Por un Perú más justo, accesible e inclusivo para todos!</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1145,6 +1249,36 @@
     </a>
 
     <!-- MODALES -->
+
+    <!-- Saludo por el Día Nacional de la Persona con Discapacidad -->
+    <div id="october-modal" class="fixed inset-0 z-[3000] hidden flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="october-modal-title" aria-describedby="october-modal-message">
+        <div class="october-modal-card relative w-full max-w-[920px] max-h-[94vh] overflow-y-auto rounded-[26px] bg-white border-4 border-white">
+            <button id="close-october-modal" type="button" class="absolute top-3 right-3 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-oscuro/90 text-white shadow-lg hover:bg-rojo focus:outline-none focus:ring-4 focus:ring-amarillo transition-colors" aria-label="Cerrar saludo">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="grid lg:grid-cols-12">
+                <div class="lg:col-span-7 bg-oscuro p-3 sm:p-5 flex items-center">
+                    <video id="october-greeting-video" class="w-full max-h-[62vh] rounded-[18px] bg-black object-contain" controls playsinline preload="metadata" aria-label="Video de saludo por el Día Nacional de la Persona con Discapacidad">
+                        <source src="assets/video-16-octubre.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este video. Puedes conocer el mensaje completo en la sección de esta página.
+                    </video>
+                </div>
+
+                <div class="lg:col-span-5 relative overflow-hidden bg-gradient-to-br from-[#FFF9C9] via-white to-[#E8F3FF] px-6 py-8 sm:px-8 sm:py-10 lg:pt-16">
+                    <span class="absolute -right-12 -bottom-12 h-40 w-40 rounded-full border-[24px] border-institucional/10" aria-hidden="true"></span>
+                    <div class="relative">
+                        <span class="etiqueta text-rojo mb-3 block">VIERNES 16 DE OCTUBRE · PERÚ</span>
+                        <h2 id="october-modal-title" class="font-serif text-[clamp(1.75rem,4vw,2.6rem)] leading-tight text-oscuro mb-5">Día Nacional de la Persona con Discapacidad</h2>
+                        <p id="october-modal-message" class="text-lg leading-relaxed text-texto-main mb-6">“Trabajemos por una igualdad de oportunidades, superemos esas brechas y eliminemos los obstáculos”.</p>
+                        <a id="october-learn-more" href="#dia-discapacidad" class="btn-rojo w-full sm:w-auto">
+                            CONOCER ESTA FECHA <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Lightbox de Imagen -->
     <div id="lightbox" class="fixed inset-0 z-[2000] flex flex-col items-center justify-center hidden">
@@ -1214,6 +1348,57 @@
         }
 
         renderLocalIcons();
+
+        // SALUDO DEL 16 DE OCTUBRE
+        const octoberModal = document.getElementById('october-modal');
+        const closeOctoberModalButton = document.getElementById('close-october-modal');
+        const octoberLearnMore = document.getElementById('october-learn-more');
+        const octoberGreetingVideo = document.getElementById('october-greeting-video');
+        let octoberPreviousFocus = null;
+
+        function openOctoberModal() {
+            octoberPreviousFocus = document.activeElement;
+            octoberModal.classList.remove('hidden');
+            octoberModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => closeOctoberModalButton.focus());
+        }
+
+        function closeOctoberModal() {
+            octoberGreetingVideo.pause();
+            octoberGreetingVideo.currentTime = 0;
+            octoberModal.classList.add('hidden');
+            octoberModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+            if (octoberPreviousFocus && octoberPreviousFocus !== document.body) {
+                octoberPreviousFocus.focus();
+            }
+        }
+
+        closeOctoberModalButton.addEventListener('click', closeOctoberModal);
+        octoberLearnMore.addEventListener('click', closeOctoberModal);
+        octoberModal.addEventListener('click', event => {
+            if (event.target === octoberModal) closeOctoberModal();
+        });
+        octoberModal.addEventListener('keydown', event => {
+            if (event.key !== 'Tab') return;
+            const focusableElements = Array.from(octoberModal.querySelectorAll('button, a, video, [tabindex]:not([tabindex="-1"])'));
+            if (!focusableElements.length) return;
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (event.shiftKey && document.activeElement === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+            } else if (!event.shiftKey && document.activeElement === lastElement) {
+                event.preventDefault();
+                firstElement.focus();
+            }
+        });
+
+        window.addEventListener('load', () => {
+            window.setTimeout(openOctoberModal, 350);
+        });
 
         // 1. ANIMACIONES DE SCROLL (Reveal)
         const observerOptions = {
@@ -1408,6 +1593,7 @@
         // Cerrar modales con la tecla ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
+                if (!octoberModal.classList.contains('hidden')) closeOctoberModal();
                 if (!mobileMenu.classList.contains('hidden')) toggleMenu();
                 if (!lightbox.classList.contains('hidden')) closeLightbox();
                 if (!videoModal.classList.contains('hidden')) closeVideoModal();
