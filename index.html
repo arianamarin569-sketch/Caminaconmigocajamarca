@@ -154,10 +154,75 @@
             box-shadow: 0 18px 42px rgba(9, 44, 92, 0.18);
         }
 
+        .celebration-layer {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        .balloon {
+            --balloon-color: #F7D900;
+            --balloon-highlight: #FFF4A3;
+            position: absolute;
+            left: var(--balloon-left);
+            bottom: -100px;
+            width: var(--balloon-size, 42px);
+            height: calc(var(--balloon-size, 42px) * 1.28);
+            border-radius: 52% 52% 48% 48%;
+            background: radial-gradient(circle at 32% 24%, var(--balloon-highlight) 0 8%, var(--balloon-color) 34% 100%);
+            box-shadow: inset -8px -10px 14px rgba(9, 44, 92, 0.12), 0 9px 22px rgba(9, 44, 92, 0.16);
+            opacity: 0;
+            animation: balloon-rise var(--balloon-speed, 8s) linear infinite;
+            animation-delay: var(--balloon-delay, 0s);
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -7px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 0;
+            border-top: 9px solid var(--balloon-color);
+            transform: translateX(-50%);
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: calc(100% + 6px);
+            width: 1px;
+            height: 76px;
+            background: rgba(255, 255, 255, 0.58);
+            transform-origin: top;
+            transform: rotate(5deg);
+        }
+
+        .balloon-red { --balloon-color: #D71920; --balloon-highlight: #FF9A9E; }
+        .balloon-blue { --balloon-color: #0B4DA2; --balloon-highlight: #8BC2FF; }
+        .balloon-yellow { --balloon-color: #F7D900; --balloon-highlight: #FFF5A9; }
+        .balloon-sky { --balloon-color: #21A8E8; --balloon-highlight: #B9ECFF; }
+
+        @keyframes balloon-rise {
+            0% { transform: translate3d(0, 80px, 0) rotate(-5deg); opacity: 0; }
+            12% { opacity: 0.9; }
+            45% { transform: translate3d(18px, -390px, 0) rotate(5deg); }
+            78% { opacity: 0.82; }
+            100% { transform: translate3d(-12px, -980px, 0) rotate(-3deg); opacity: 0; }
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            .reveal, .play-btn, .masonry-item img, .btn-rojo {
+            .reveal, .play-btn, .masonry-item img, .btn-rojo, .balloon {
                 transition: none !important;
+                animation: none !important;
             }
+            .balloon { display: none; }
         }
         
         /* Play Button Overlay */
@@ -289,6 +354,27 @@
                     <figure class="october-photo h-48 sm:h-56 rounded-[28px] overflow-hidden bg-white border-4 border-white rotate-2">
                         <img src="assets/visita-comunitaria.jpeg" alt="Familias reunidas durante una visita de Camina Conmigo en Cajamarca" class="w-full h-full object-cover" loading="lazy">
                     </figure>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 overflow-hidden rounded-[30px] bg-white border border-institucional/10 shadow-[0_24px_65px_rgba(9,44,92,0.16)] mb-12 md:mb-16 reveal">
+                <div class="lg:col-span-7 relative overflow-hidden bg-gradient-to-br from-rojo via-[#E12B32] to-[#A80E14] px-7 py-9 md:px-10 md:py-12 text-white flex items-center">
+                    <span class="absolute -left-12 -top-12 h-44 w-44 rounded-full border-[26px] border-amarillo/25" aria-hidden="true"></span>
+                    <span class="absolute right-8 top-8 text-amarillo/60 text-4xl" aria-hidden="true">✦</span>
+                    <div class="relative max-w-2xl">
+                        <span class="etiqueta text-amarillo mb-3 block">UN SALUDO ESPECIAL</span>
+                        <h3 class="h3-main text-white mb-4">Un mensaje por la igualdad y la inclusión</h3>
+                        <p class="text-lg leading-relaxed text-white/90 mb-6">Compartimos este saludo para recordar que una sociedad más accesible se construye cuando eliminamos barreras y abrimos oportunidades para todas las personas.</p>
+                        <p class="font-serif text-2xl md:text-3xl leading-snug text-amarillo mb-7">“Trabajemos por una igualdad de oportunidades”.</p>
+                        <a href="https://youtube.com/shorts/2-p1d7RyxlQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-rojo shadow-lg hover:bg-amarillo hover:text-oscuro transition-colors">
+                            VER EN YOUTUBE <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-oscuro p-5 md:p-8 flex items-center justify-center">
+                    <div class="w-full max-w-[350px] aspect-[9/16] overflow-hidden rounded-[24px] bg-black shadow-[0_20px_55px_rgba(0,0,0,0.38)] border-4 border-white/15">
+                        <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/2-p1d7RyxlQ?rel=0&playsinline=1" title="Saludo por el Día Nacional de la Persona con Discapacidad" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -1252,20 +1338,31 @@
 
     <!-- Saludo por el Día Nacional de la Persona con Discapacidad -->
     <div id="october-modal" class="fixed inset-0 z-[3000] hidden flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="october-modal-title" aria-describedby="october-modal-message">
-        <div class="october-modal-card relative w-full max-w-[920px] max-h-[94vh] overflow-y-auto rounded-[26px] bg-white border-4 border-white">
-            <button id="close-october-modal" type="button" class="absolute top-3 right-3 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-oscuro/90 text-white shadow-lg hover:bg-rojo focus:outline-none focus:ring-4 focus:ring-amarillo transition-colors" aria-label="Cerrar saludo">
+        <div class="october-modal-card relative isolate w-full max-w-[920px] max-h-[94vh] overflow-y-auto rounded-[26px] bg-white border-4 border-white">
+            <div class="celebration-layer z-20" aria-hidden="true">
+                <span class="balloon balloon-yellow" style="--balloon-left: 4%; --balloon-size: 38px; --balloon-speed: 8.5s; --balloon-delay: -4.8s;"></span>
+                <span class="balloon balloon-red" style="--balloon-left: 17%; --balloon-size: 46px; --balloon-speed: 10s; --balloon-delay: -1.6s;"></span>
+                <span class="balloon balloon-sky" style="--balloon-left: 35%; --balloon-size: 34px; --balloon-speed: 7.8s; --balloon-delay: -6.2s;"></span>
+                <span class="balloon balloon-blue" style="--balloon-left: 62%; --balloon-size: 42px; --balloon-speed: 9.2s; --balloon-delay: -3.1s;"></span>
+                <span class="balloon balloon-yellow" style="--balloon-left: 77%; --balloon-size: 35px; --balloon-speed: 8.2s; --balloon-delay: -7s;"></span>
+                <span class="balloon balloon-red" style="--balloon-left: 91%; --balloon-size: 44px; --balloon-speed: 10.5s; --balloon-delay: -5.4s;"></span>
+            </div>
+
+            <button id="close-october-modal" type="button" class="absolute top-3 right-3 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-oscuro/90 text-white shadow-lg hover:bg-rojo focus:outline-none focus:ring-4 focus:ring-amarillo transition-colors" aria-label="Cerrar saludo">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
 
-            <div class="grid lg:grid-cols-12">
-                <div class="lg:col-span-7 bg-oscuro p-3 sm:p-5 flex items-center">
-                    <video id="october-greeting-video" class="w-full max-h-[62vh] rounded-[18px] bg-black object-contain" controls playsinline preload="metadata" aria-label="Video de saludo por el Día Nacional de la Persona con Discapacidad">
-                        <source src="assets/video-16-octubre.mp4" type="video/mp4">
-                        Tu navegador no puede reproducir este video. Puedes conocer el mensaje completo en la sección de esta página.
-                    </video>
+            <div class="grid lg:grid-cols-12 relative">
+                <div class="lg:col-span-5 bg-oscuro px-3 py-4 sm:p-5 flex flex-col items-center justify-center">
+                    <div class="relative z-30 w-[min(54vw,190px)] sm:w-full sm:max-w-[300px] lg:max-w-[330px] aspect-[9/16] rounded-[18px] overflow-hidden bg-black shadow-2xl border-2 border-white/15">
+                        <iframe id="october-greeting-frame" class="w-full h-full" src="" data-src="https://www.youtube-nocookie.com/embed/2-p1d7RyxlQ?rel=0&playsinline=1" title="Video de saludo por el Día Nacional de la Persona con Discapacidad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <a href="https://youtube.com/shorts/2-p1d7RyxlQ" target="_blank" rel="noopener noreferrer" class="relative z-30 mt-3 text-xs font-semibold text-white/75 hover:text-amarillo transition-colors inline-flex items-center gap-1.5">
+                        Abrir en YouTube <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                    </a>
                 </div>
 
-                <div class="lg:col-span-5 relative overflow-hidden bg-gradient-to-br from-[#FFF9C9] via-white to-[#E8F3FF] px-6 py-8 sm:px-8 sm:py-10 lg:pt-16">
+                <div class="lg:col-span-7 relative z-30 overflow-hidden bg-gradient-to-br from-[#FFF9C9] via-white to-[#E8F3FF] px-6 py-5 sm:px-8 sm:py-10 lg:pt-16">
                     <span class="absolute -right-12 -bottom-12 h-40 w-40 rounded-full border-[24px] border-institucional/10" aria-hidden="true"></span>
                     <div class="relative">
                         <span class="etiqueta text-rojo mb-3 block">VIERNES 16 DE OCTUBRE · PERÚ</span>
@@ -1353,11 +1450,14 @@
         const octoberModal = document.getElementById('october-modal');
         const closeOctoberModalButton = document.getElementById('close-october-modal');
         const octoberLearnMore = document.getElementById('october-learn-more');
-        const octoberGreetingVideo = document.getElementById('october-greeting-video');
+        const octoberGreetingFrame = document.getElementById('october-greeting-frame');
         let octoberPreviousFocus = null;
 
         function openOctoberModal() {
             octoberPreviousFocus = document.activeElement;
+            if (!octoberGreetingFrame.getAttribute('src')) {
+                octoberGreetingFrame.src = octoberGreetingFrame.dataset.src;
+            }
             octoberModal.classList.remove('hidden');
             octoberModal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -1365,8 +1465,7 @@
         }
 
         function closeOctoberModal() {
-            octoberGreetingVideo.pause();
-            octoberGreetingVideo.currentTime = 0;
+            octoberGreetingFrame.src = '';
             octoberModal.classList.add('hidden');
             octoberModal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = 'auto';
@@ -1382,7 +1481,7 @@
         });
         octoberModal.addEventListener('keydown', event => {
             if (event.key !== 'Tab') return;
-            const focusableElements = Array.from(octoberModal.querySelectorAll('button, a, video, [tabindex]:not([tabindex="-1"])'));
+            const focusableElements = Array.from(octoberModal.querySelectorAll('button, a, iframe, [tabindex]:not([tabindex="-1"])'));
             if (!focusableElements.length) return;
             const firstElement = focusableElements[0];
             const lastElement = focusableElements[focusableElements.length - 1];
