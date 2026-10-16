@@ -217,12 +217,67 @@
             100% { transform: translate3d(-12px, -980px, 0) rotate(-3deg); opacity: 0; }
         }
 
+        .runner-track {
+            position: relative;
+            height: 58px;
+            margin-top: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(11, 77, 162, 0.12);
+            border-radius: 18px;
+            background:
+                radial-gradient(circle at 12% 24%, rgba(255, 255, 255, 0.95) 0 9px, transparent 10px),
+                radial-gradient(circle at 18% 25%, rgba(255, 255, 255, 0.95) 0 12px, transparent 13px),
+                radial-gradient(circle at 84% 20%, rgba(255, 255, 255, 0.92) 0 11px, transparent 12px),
+                linear-gradient(180deg, #DDF3FF 0 68%, #F7D900 69% 78%, #8CCB78 79% 100%);
+        }
+
+        .runner-track::after {
+            content: '';
+            position: absolute;
+            right: 16px;
+            top: 9px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: #F7D900;
+            box-shadow: 0 0 0 6px rgba(247, 217, 0, 0.18);
+        }
+
+        .runner {
+            position: absolute;
+            z-index: 2;
+            left: -64px;
+            bottom: 7px;
+            width: 48px;
+            height: 45px;
+            filter: drop-shadow(0 3px 3px rgba(9, 44, 92, 0.18));
+            animation: runner-cross var(--runner-speed, 8s) linear infinite,
+                       runner-bounce 0.42s ease-in-out infinite alternate;
+            animation-delay: var(--runner-delay, 0s), var(--bounce-delay, 0s);
+        }
+
+        .runner:nth-child(2) { width: 45px; height: 42px; }
+        .runner:nth-child(3) { width: 50px; height: 47px; }
+
+        @keyframes runner-cross {
+            from { left: -68px; }
+            to { left: calc(100% + 68px); }
+        }
+
+        @keyframes runner-bounce {
+            from { transform: translateY(0) rotate(-2deg); }
+            to { transform: translateY(-4px) rotate(2deg); }
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            .reveal, .play-btn, .masonry-item img, .btn-rojo, .balloon {
+            .reveal, .play-btn, .masonry-item img, .btn-rojo, .balloon, .runner {
                 transition: none !important;
                 animation: none !important;
             }
             .balloon { display: none; }
+            .runner:nth-child(1) { left: 12%; }
+            .runner:nth-child(2) { left: 43%; }
+            .runner:nth-child(3) { left: 72%; }
         }
         
         /* Play Button Overlay */
@@ -357,22 +412,33 @@
                 </div>
             </div>
 
-            <div class="grid lg:grid-cols-12 overflow-hidden rounded-[30px] bg-white border border-institucional/10 shadow-[0_24px_65px_rgba(9,44,92,0.16)] mb-12 md:mb-16 reveal">
-                <div class="lg:col-span-7 relative overflow-hidden bg-gradient-to-br from-rojo via-[#E12B32] to-[#A80E14] px-7 py-9 md:px-10 md:py-12 text-white flex items-center">
-                    <span class="absolute -left-12 -top-12 h-44 w-44 rounded-full border-[26px] border-amarillo/25" aria-hidden="true"></span>
-                    <span class="absolute right-8 top-8 text-amarillo/60 text-4xl" aria-hidden="true">✦</span>
+            <div class="relative grid lg:grid-cols-12 overflow-hidden rounded-[30px] bg-white border border-institucional/10 shadow-[0_24px_65px_rgba(9,44,92,0.16)] mb-12 md:mb-16 reveal">
+                <div class="absolute inset-x-0 top-0 z-20 h-2 bg-gradient-to-r from-rojo via-amarillo to-[#21A8E8]" aria-hidden="true"></div>
+                <div class="lg:col-span-7 relative overflow-hidden bg-gradient-to-br from-[#FFF8C9] via-[#F7FBFF] to-[#DDEFFF] px-7 py-10 md:px-10 md:py-12 flex items-center">
+                    <span class="absolute -left-14 -top-16 h-48 w-48 rounded-full border-[28px] border-rojo/10" aria-hidden="true"></span>
+                    <span class="absolute -right-10 -bottom-16 h-52 w-52 rounded-full border-[30px] border-institucional/10" aria-hidden="true"></span>
+                    <span class="absolute right-9 top-9 text-rojo/55 text-3xl" aria-hidden="true">✦</span>
+                    <span class="absolute right-20 top-16 text-institucional/45 text-xl" aria-hidden="true">●</span>
                     <div class="relative max-w-2xl">
-                        <span class="etiqueta text-amarillo mb-3 block">UN SALUDO ESPECIAL</span>
-                        <h3 class="h3-main text-white mb-4">Un mensaje por la igualdad y la inclusión</h3>
-                        <p class="text-lg leading-relaxed text-white/90 mb-6">Compartimos este saludo para recordar que una sociedad más accesible se construye cuando eliminamos barreras y abrimos oportunidades para todas las personas.</p>
-                        <p class="font-serif text-2xl md:text-3xl leading-snug text-amarillo mb-7">“Trabajemos por una igualdad de oportunidades”.</p>
-                        <a href="https://youtube.com/shorts/2-p1d7RyxlQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-rojo shadow-lg hover:bg-amarillo hover:text-oscuro transition-colors">
+                        <span class="etiqueta mb-4 inline-flex items-center gap-2 rounded-full bg-institucional px-4 py-2 text-white shadow-sm">
+                            <span class="h-2.5 w-2.5 rounded-full bg-amarillo" aria-hidden="true"></span>
+                            UN SALUDO ESPECIAL
+                        </span>
+                        <h3 class="h3-main text-oscuro mb-4">Un mensaje por la igualdad y la inclusión</h3>
+                        <p class="text-lg leading-relaxed text-texto-main mb-6">Compartimos este saludo para recordar que una sociedad más accesible se construye cuando eliminamos barreras y abrimos oportunidades para todas las personas.</p>
+                        <div class="mb-7 flex items-start gap-4 rounded-[22px] border border-amarillo bg-[#FFF4A8] px-5 py-4 shadow-sm">
+                            <span class="mt-0.5 text-3xl leading-none text-rojo" aria-hidden="true">“</span>
+                            <p class="font-serif text-2xl md:text-3xl leading-snug text-oscuro">Trabajemos por una igualdad de oportunidades”.</p>
+                        </div>
+                        <a href="https://youtube.com/shorts/2-p1d7RyxlQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-rojo px-5 py-3 text-sm font-bold text-white shadow-[0_10px_25px_rgba(215,25,32,0.22)] hover:bg-oscuro transition-colors">
                             VER EN YOUTUBE <i data-lucide="external-link" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-oscuro p-5 md:p-8 flex items-center justify-center">
-                    <div class="w-full max-w-[350px] aspect-[9/16] overflow-hidden rounded-[24px] bg-black shadow-[0_20px_55px_rgba(0,0,0,0.38)] border-4 border-white/15">
+                <div class="lg:col-span-5 relative overflow-hidden bg-gradient-to-br from-oscuro via-[#0B4DA2] to-[#126BC5] p-5 md:p-8 flex items-center justify-center">
+                    <span class="absolute -right-10 top-10 h-36 w-36 rounded-full bg-amarillo/20" aria-hidden="true"></span>
+                    <span class="absolute left-8 bottom-10 h-20 w-20 rounded-full border-[14px] border-[#69D3FF]/25" aria-hidden="true"></span>
+                    <div class="relative w-full max-w-[350px] aspect-[9/16] overflow-hidden rounded-[24px] bg-black shadow-[0_20px_55px_rgba(0,0,0,0.38)] border-4 border-white/20">
                         <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/2-p1d7RyxlQ?rel=0&playsinline=1" title="Saludo por el Día Nacional de la Persona con Discapacidad" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -1353,24 +1419,51 @@
             </button>
 
             <div class="grid lg:grid-cols-12 relative">
-                <div class="lg:col-span-5 bg-oscuro px-3 py-4 sm:p-5 flex flex-col items-center justify-center">
-                    <div class="relative z-30 w-[min(54vw,190px)] sm:w-full sm:max-w-[300px] lg:max-w-[330px] aspect-[9/16] rounded-[18px] overflow-hidden bg-black shadow-2xl border-2 border-white/15">
+                <div class="lg:col-span-5 bg-oscuro px-3 py-3 sm:p-5 flex flex-col items-center justify-center">
+                    <div class="relative z-30 w-[min(50vw,175px)] sm:w-full sm:max-w-[300px] lg:max-w-[330px] aspect-[9/16] rounded-[18px] overflow-hidden bg-black shadow-2xl border-2 border-white/15">
                         <iframe id="october-greeting-frame" class="w-full h-full" src="" data-src="https://www.youtube-nocookie.com/embed/2-p1d7RyxlQ?rel=0&playsinline=1" title="Video de saludo por el Día Nacional de la Persona con Discapacidad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-                    <a href="https://youtube.com/shorts/2-p1d7RyxlQ" target="_blank" rel="noopener noreferrer" class="relative z-30 mt-3 text-xs font-semibold text-white/75 hover:text-amarillo transition-colors inline-flex items-center gap-1.5">
-                        Abrir en YouTube <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-                    </a>
                 </div>
 
-                <div class="lg:col-span-7 relative z-30 overflow-hidden bg-gradient-to-br from-[#FFF9C9] via-white to-[#E8F3FF] px-6 py-5 sm:px-8 sm:py-10 lg:pt-16">
+                <div class="lg:col-span-7 relative z-30 overflow-hidden bg-gradient-to-br from-[#FFF9C9] via-white to-[#E8F3FF] px-6 py-4 sm:px-8 sm:py-9 lg:pt-14">
                     <span class="absolute -right-12 -bottom-12 h-40 w-40 rounded-full border-[24px] border-institucional/10" aria-hidden="true"></span>
                     <div class="relative">
                         <span class="etiqueta text-rojo mb-3 block">VIERNES 16 DE OCTUBRE · PERÚ</span>
-                        <h2 id="october-modal-title" class="font-serif text-[clamp(1.75rem,4vw,2.6rem)] leading-tight text-oscuro mb-5">Día Nacional de la Persona con Discapacidad</h2>
-                        <p id="october-modal-message" class="text-lg leading-relaxed text-texto-main mb-6">“Trabajemos por una igualdad de oportunidades, superemos esas brechas y eliminemos los obstáculos”.</p>
+                        <h2 id="october-modal-title" class="font-serif text-[clamp(1.75rem,4vw,2.6rem)] leading-tight text-oscuro mb-3 sm:mb-5">Día Nacional de la Persona con Discapacidad</h2>
+                        <p id="october-modal-message" class="text-base sm:text-lg leading-relaxed text-texto-main mb-4 sm:mb-6">“Trabajemos por una igualdad de oportunidades, superemos esas brechas y eliminemos los obstáculos”.</p>
                         <a id="october-learn-more" href="#dia-discapacidad" class="btn-rojo w-full sm:w-auto">
                             CONOCER ESTA FECHA <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
+
+                        <div class="runner-track" aria-hidden="true">
+                            <span class="runner" style="--runner-speed: 7.6s; --runner-delay: -1.2s; --bounce-delay: -0.1s;">
+                                <svg viewBox="0 0 64 56" class="h-full w-full" focusable="false">
+                                    <circle cx="34" cy="9" r="6.5" fill="#B96F45"/>
+                                    <path d="M31 16 27 31" stroke="#D71920" stroke-width="7" stroke-linecap="round"/>
+                                    <path d="m29 21-13 8m14-8 13 7" stroke="#B96F45" stroke-width="4" stroke-linecap="round"/>
+                                    <path d="m27 31-13 14m14-14 13 12" stroke="#092C5C" stroke-width="5" stroke-linecap="round"/>
+                                    <path d="M12 46h9m18-2h9" stroke="#0B4DA2" stroke-width="4" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span class="runner" style="--runner-speed: 8.8s; --runner-delay: -5.5s; --bounce-delay: -0.25s;">
+                                <svg viewBox="0 0 64 56" class="h-full w-full" focusable="false">
+                                    <circle cx="34" cy="9" r="6.5" fill="#7A432B"/>
+                                    <path d="M31 16 27 31" stroke="#0B4DA2" stroke-width="7" stroke-linecap="round"/>
+                                    <path d="m29 21-13 8m14-8 13 7" stroke="#7A432B" stroke-width="4" stroke-linecap="round"/>
+                                    <path d="m27 31-13 14m14-14 13 12" stroke="#D71920" stroke-width="5" stroke-linecap="round"/>
+                                    <path d="M12 46h9m18-2h9" stroke="#092C5C" stroke-width="4" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span class="runner" style="--runner-speed: 9.6s; --runner-delay: -8s; --bounce-delay: -0.35s;">
+                                <svg viewBox="0 0 64 56" class="h-full w-full" focusable="false">
+                                    <circle cx="34" cy="9" r="6.5" fill="#D49A6A"/>
+                                    <path d="M31 16 27 31" stroke="#F7D900" stroke-width="7" stroke-linecap="round"/>
+                                    <path d="m29 21-13 8m14-8 13 7" stroke="#D49A6A" stroke-width="4" stroke-linecap="round"/>
+                                    <path d="m27 31-13 14m14-14 13 12" stroke="#0B4DA2" stroke-width="5" stroke-linecap="round"/>
+                                    <path d="M12 46h9m18-2h9" stroke="#D71920" stroke-width="4" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
