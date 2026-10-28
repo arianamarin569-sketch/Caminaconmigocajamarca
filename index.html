@@ -133,10 +133,25 @@
         .masonry-item:hover img { transform: scale(1.02); }
 
         /* Lightbox Modals */
-        #lightbox, #video-modal {
+        #lightbox, #video-modal, #event-modal {
             backdrop-filter: blur(8px);
             background-color: rgba(9, 44, 92, 0.95);
             transition: opacity 0.3s ease;
+        }
+
+        #event-modal {
+            background:
+                radial-gradient(circle at 12% 16%, rgba(215, 176, 55, 0.34), transparent 27%),
+                radial-gradient(circle at 88% 82%, rgba(255, 224, 107, 0.20), transparent 30%),
+                rgba(2, 12, 77, 0.95);
+        }
+
+        .event-modal-card {
+            box-shadow: 0 28px 90px rgba(0, 7, 55, 0.58);
+        }
+
+        .event-poster {
+            box-shadow: 0 22px 55px rgba(0, 4, 48, 0.42);
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -174,8 +189,8 @@
     <!-- HEADER -->
     <header class="sticky top-0 z-[1000] h-[74px] md:h-[82px] bg-white/95 backdrop-blur-[14px] border-b border-gray-100 flex items-center transition-all duration-300">
         <div class="max-w-site mx-auto px-5 sm:px-6 w-full flex justify-between items-center">
-            <a href="#" class="flex-shrink-0">
-                <img src="assets/logo-camina-conmigo.png" alt="Logo oficial de la Asociación Civil ONG Camina Conmigo" class="h-[62px] md:h-[78px] object-contain py-1 rounded-full">
+            <a href="#" class="min-w-0 flex-shrink">
+                <img src="assets/logo-camina-conmigo.png" alt="Logo oficial de la Asociación Civil ONG Camina Conmigo" class="h-[62px] md:h-[78px] w-auto max-w-[calc(100vw-104px)] md:max-w-none object-contain py-1 rounded-full">
             </a>
             
             <nav class="hidden lg:flex items-center gap-8">
@@ -253,6 +268,10 @@
                 </div>
 
                 <div class="flex gap-2.5 overflow-x-auto no-scrollbar py-1">
+                    <a href="#noche-esperanza" class="flex min-w-[230px] items-center gap-3 rounded-2xl border border-[#D7B037]/35 bg-[#F4F1FF] px-4 py-3 text-oscuro transition hover:-translate-y-0.5 hover:shadow-md">
+                        <span class="text-2xl text-[#D7B037]" aria-hidden="true">✦</span>
+                        <span><strong class="block text-sm">Brillos de Solidaridad</strong><small class="text-texto-muted">19 de noviembre · 7:00 p. m.</small></span>
+                    </a>
                     <a href="#campana-navidad" class="flex min-w-[210px] items-center gap-3 rounded-2xl border border-rojo/15 bg-[#FFF2F2] px-4 py-3 text-oscuro transition hover:-translate-y-0.5 hover:shadow-md">
                         <span class="text-2xl" aria-hidden="true">🎄</span>
                         <span><strong class="block text-sm">Campaña navideña</strong><small class="text-texto-muted">Conoce cómo apoyar</small></span>
@@ -268,6 +287,71 @@
             </div>
         </div>
     </nav>
+
+    <!-- BRILLOS DE SOLIDARIDAD 2026 · UNA NOCHE DE ESPERANZA -->
+    <section id="noche-esperanza" class="relative overflow-hidden bg-[#090FCF] py-20 md:py-[112px] border-y-[7px] border-[#D7B037] scroll-mt-24">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+            <span class="absolute inset-0 opacity-[0.08]" style="background-image: radial-gradient(#ffffff 1.2px, transparent 1.2px); background-size: 27px 27px;"></span>
+            <span class="absolute -top-40 -right-20 h-[430px] w-[430px] rounded-full bg-[#D7B037]/30 blur-3xl"></span>
+            <span class="absolute -bottom-48 -left-24 h-[500px] w-[500px] rounded-full bg-[#FFE06B]/15 blur-3xl"></span>
+            <span class="absolute left-[7%] top-10 text-6xl text-[#FFE06B]/55">✦</span>
+            <span class="absolute right-[9%] bottom-12 text-7xl text-white/10">✦</span>
+        </div>
+
+        <div class="max-w-site mx-auto px-5 sm:px-6 relative z-10">
+            <div class="grid lg:grid-cols-12 items-center gap-12 lg:gap-16 xl:gap-20">
+                <figure class="lg:col-span-5 flex justify-center lg:justify-start reveal">
+                    <button type="button" class="group relative w-full max-w-[470px] text-left rounded-[28px] focus:outline-none focus:ring-4 focus:ring-[#FFE06B]" onclick="openLightbox('assets/brillos-de-solidaridad-2026.jpeg', 'Afiche completo de Brillos de Solidaridad 2026 · Una Noche de Esperanza')" aria-label="Ampliar el afiche de Brillos de Solidaridad 2026">
+                        <span class="absolute -inset-3 sm:-inset-4 rounded-[32px] bg-[#D7B037] rotate-[-2deg] transition-transform duration-500 group-hover:rotate-[-1deg]" aria-hidden="true"></span>
+                        <span class="absolute -inset-1 rounded-[29px] border-2 border-white/60 rotate-[1.5deg]" aria-hidden="true"></span>
+                        <img src="assets/brillos-de-solidaridad-2026.jpeg" alt="Afiche de Brillos de Solidaridad 2026, Una Noche de Esperanza" class="event-poster relative w-full h-auto rounded-[26px] border-[5px] border-white object-cover transition-transform duration-500 group-hover:scale-[1.012]" loading="eager">
+                        <span class="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-white/95 px-4 py-2 text-sm font-bold text-[#090FCF] shadow-xl">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i> Ver afiche completo
+                        </span>
+                    </button>
+                </figure>
+
+                <div class="lg:col-span-7 text-white reveal">
+                    <span class="etiqueta inline-flex items-center gap-2 rounded-full border border-[#FFE06B]/45 bg-[#07108F]/75 px-4 py-2 text-[#FFE06B] shadow-lg">
+                        <span aria-hidden="true">✦</span> DESFILE DE MODAS SOLIDARIO
+                    </span>
+                    <h2 class="font-serif text-[clamp(42px,5.5vw,72px)] leading-[0.98] mt-6 mb-3">Brillos de<br><span class="text-[#FFE06B]">Solidaridad 2026</span></h2>
+                    <p class="font-serif text-2xl sm:text-3xl text-white/90 mb-6">Una Noche de Esperanza</p>
+
+                    <p class="text-base sm:text-lg leading-relaxed text-white/90 max-w-3xl">La Asociación Civil ONG Camina Conmigo se complace en invitarte al tradicional Desfile de Modas <strong class="text-white">“Brillos de Solidaridad 2026”</strong>. Disfruta de la belleza y la elegancia, donde se mezclan la moda y la solidaridad, con el único objetivo de recaudar fondos para el desarrollo de la Campaña Navideña y llevar tu <strong class="text-[#FFE06B]">“Magia de Amor”</strong> a los niños con habilidades especiales que viven en extrema pobreza.</p>
+
+                    <div class="grid sm:grid-cols-3 gap-3 mt-8">
+                        <div class="rounded-[20px] border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
+                            <span class="etiqueta text-[#FFE06B] block mb-1">FECHA Y HORA</span>
+                            <p class="font-semibold leading-snug">Jueves 19 de noviembre de 2026<br>7:00 p. m.</p>
+                        </div>
+                        <div class="rounded-[20px] border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
+                            <span class="etiqueta text-[#FFE06B] block mb-1">LUGAR</span>
+                            <p class="font-semibold leading-snug">Vora Club<br>Jr. del Comercio 770</p>
+                        </div>
+                        <div class="rounded-[20px] border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
+                            <span class="etiqueta text-[#FFE06B] block mb-1">COLABORACIÓN</span>
+                            <p class="font-serif text-3xl leading-snug">S/ 30.00</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-7 rounded-[24px] border border-[#FFE06B]/30 border-l-[6px] border-l-[#D7B037] bg-[#050A70]/75 p-5 sm:p-6">
+                        <span class="etiqueta text-[#FFE06B] block mb-2">MODOS DE PAGO</span>
+                        <p class="text-white/85 leading-relaxed">Consulta en el afiche oficial la información completa para realizar tu colaboración mediante Yape o BCP.</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-3 mt-8">
+                        <a href="#ayuda" class="inline-flex items-center justify-center gap-2 rounded-full bg-[#FFE06B] px-6 py-3.5 font-bold text-[#07108F] shadow-[0_14px_35px_rgba(0,0,0,0.25)] transition-all hover:-translate-y-1 hover:bg-white focus:outline-none focus:ring-4 focus:ring-white/70">
+                            QUIERO SUMARME <i data-lucide="heart" class="w-5 h-5"></i>
+                        </a>
+                        <button type="button" onclick="openLightbox('assets/brillos-de-solidaridad-2026.jpeg', 'Afiche completo de Brillos de Solidaridad 2026 · Una Noche de Esperanza')" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/70 px-6 py-3.5 font-bold text-white transition-colors hover:bg-white hover:text-[#07108F] focus:outline-none focus:ring-4 focus:ring-[#FFE06B]/70">
+                            VER AFICHE COMPLETO <i data-lucide="zoom-in" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- AGRADECIMIENTO A UNIMAQ POR LA PÁGINA WEB -->
     <section id="agradecimiento-unimaq" class="relative overflow-hidden bg-gradient-to-br from-[#EDF5FF] via-white to-[#FFF8CC] py-20 md:py-[112px] scroll-mt-24">
@@ -1303,6 +1387,49 @@
 
     <!-- MODALES -->
 
+    <!-- Invitación a Brillos de Solidaridad 2026 -->
+    <div id="event-modal" class="fixed inset-0 z-[3000] hidden flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="event-modal-title" aria-describedby="event-modal-message">
+        <div class="event-modal-card relative isolate w-full max-w-[1020px] max-h-[94vh] overflow-y-auto rounded-[28px] bg-[#090FCF] border-[4px] border-white">
+            <div class="absolute inset-0 overflow-hidden rounded-[24px] pointer-events-none" aria-hidden="true">
+                <span class="absolute -top-24 -right-16 h-72 w-72 rounded-full bg-[#D7B037]/35 blur-3xl"></span>
+                <span class="absolute -bottom-32 left-[36%] h-80 w-80 rounded-full bg-[#FFE06B]/15 blur-3xl"></span>
+                <span class="absolute left-[48%] top-6 text-5xl text-[#FFE06B]/50">✦</span>
+            </div>
+
+            <button id="close-event-modal" type="button" class="absolute top-3 right-3 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#07108F] shadow-lg hover:bg-[#FFE06B] focus:outline-none focus:ring-4 focus:ring-[#D7B037] transition-colors" aria-label="Cerrar invitación">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="grid md:grid-cols-12 relative">
+                <div class="md:col-span-5 bg-[#050A70] px-4 py-4 sm:p-6 flex items-center justify-center">
+                    <img src="assets/brillos-de-solidaridad-2026.jpeg" alt="Afiche de Brillos de Solidaridad 2026, Una Noche de Esperanza" class="event-poster relative z-10 w-auto max-w-full max-h-[34vh] md:max-h-[78vh] rounded-[18px] border-[3px] border-white/90 object-contain">
+                </div>
+
+                <div class="md:col-span-7 relative z-10 px-6 py-7 sm:px-9 sm:py-10 md:px-10 md:py-12 text-white">
+                    <span class="etiqueta text-[#FFE06B] mb-3 block">JUEVES 19 DE NOVIEMBRE · 7:00 P. M.</span>
+                    <h2 id="event-modal-title" class="font-serif text-[clamp(2.25rem,5vw,3.7rem)] leading-[0.98] mb-2">Brillos de<br><span class="text-[#FFE06B]">Solidaridad 2026</span></h2>
+                    <p class="font-serif text-xl sm:text-2xl text-white/80 mb-5">Una Noche de Esperanza</p>
+                    <p id="event-modal-message" class="text-base sm:text-lg leading-relaxed text-white/90 mb-6">Camina Conmigo te invita a una noche donde la moda y la solidaridad se unen para recaudar fondos para la Campaña Navideña y llevar Magia de Amor a niños con habilidades especiales que viven en extrema pobreza.</p>
+
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <div class="rounded-[18px] border border-white/20 bg-white/10 p-4">
+                            <span class="etiqueta text-[#FFE06B] block mb-1">LUGAR</span>
+                            <p class="font-semibold leading-snug">Vora Club<br>Jr. del Comercio 770</p>
+                        </div>
+                        <div class="rounded-[18px] border border-white/20 bg-white/10 p-4">
+                            <span class="etiqueta text-[#FFE06B] block mb-1">COLABORACIÓN</span>
+                            <p class="font-serif text-3xl leading-snug">S/ 30.00</p>
+                        </div>
+                    </div>
+
+                    <a id="event-learn-more" href="#noche-esperanza" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#FFE06B] px-6 py-3.5 font-bold text-[#07108F] shadow-lg transition-all hover:-translate-y-1 hover:bg-white focus:outline-none focus:ring-4 focus:ring-white/70">
+                        CONOCER LA ACTIVIDAD <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox de Imagen -->
     <div id="lightbox" class="fixed inset-0 z-[2000] flex flex-col items-center justify-center hidden">
         <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white p-3 bg-white/10 rounded-full hover:bg-white/20 transition" aria-label="Cerrar imagen ampliada">
@@ -1371,6 +1498,54 @@
         }
 
         renderLocalIcons();
+
+        // INVITACIÓN A BRILLOS DE SOLIDARIDAD 2026
+        const eventModal = document.getElementById('event-modal');
+        const closeEventModalButton = document.getElementById('close-event-modal');
+        const eventLearnMore = document.getElementById('event-learn-more');
+        let eventPreviousFocus = null;
+
+        function openEventModal() {
+            eventPreviousFocus = document.activeElement;
+            eventModal.classList.remove('hidden');
+            eventModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => closeEventModalButton.focus());
+        }
+
+        function closeEventModal() {
+            eventModal.classList.add('hidden');
+            eventModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+            if (eventPreviousFocus && eventPreviousFocus !== document.body) {
+                eventPreviousFocus.focus();
+            }
+        }
+
+        closeEventModalButton.addEventListener('click', closeEventModal);
+        eventLearnMore.addEventListener('click', closeEventModal);
+        eventModal.addEventListener('click', event => {
+            if (event.target === eventModal) closeEventModal();
+        });
+        eventModal.addEventListener('keydown', event => {
+            if (event.key !== 'Tab') return;
+            const focusableElements = Array.from(eventModal.querySelectorAll('button, a, [tabindex]:not([tabindex="-1"])'));
+            if (!focusableElements.length) return;
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (event.shiftKey && document.activeElement === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+            } else if (!event.shiftKey && document.activeElement === lastElement) {
+                event.preventDefault();
+                firstElement.focus();
+            }
+        });
+
+        window.addEventListener('load', () => {
+            window.setTimeout(openEventModal, 350);
+        });
 
         // 1. ANIMACIONES DE SCROLL (Reveal)
         const observerOptions = {
@@ -1570,7 +1745,7 @@
         // Cerrar modales con la tecla ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                if (!octoberModal.classList.contains('hidden')) closeOctoberModal();
+                if (!eventModal.classList.contains('hidden')) closeEventModal();
                 if (!mobileMenu.classList.contains('hidden')) toggleMenu();
                 if (!lightbox.classList.contains('hidden')) closeLightbox();
                 if (!videoModal.classList.contains('hidden')) closeVideoModal();
